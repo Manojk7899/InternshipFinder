@@ -23,6 +23,50 @@ answer the questions it left, attach your resume, and submit it yourself.
 
 ---
 
+## How it works
+
+Your details are **not** kept in a file in this repository. Nothing personal is committed
+here. They live in `chrome.storage.local` under a single key, `profile`, inside your own
+browser profile — written once from the options page:
+
+```json
+{
+  "firstName": "…", "lastName": "…", "fullName": "…",
+  "email": "…", "phone": "…", "location": "Bangalore, India",
+  "linkedin": "https://linkedin.com/in/…",
+  "github": "https://github.com/…",
+  "portfolio": "https://….vercel.app",
+  "college": "…", "degree": "…", "gradYear": "2026",
+  "noticePeriod": "Immediate", "experience": "0",
+  "company": "None", "currentCtc": "…", "expectedCtc": "…"
+}
+```
+
+What happens when you click the toolbar button:
+
+```
+click
+  ↓
+background.js   injects matcher.js + content.js into that one tab
+  ↓             (activeTab — one tab, one click, no standing access)
+content.js      reads chrome.storage.local → profile
+  ↓
+matcher.js      for each visible input / textarea / select:
+  ↓               1. gather its label — label[for], aria-label,
+                     aria-labelledby, wrapping <label>, placeholder,
+                     sibling text, name attribute
+                  2. test that text against 17 ordered regexes → a key
+                  3. look up profile[key]
+                  4. fill it, or record why it was skipped
+  ↓
+content.js      panel: what was filled, what you must answer yourself
+```
+
+Filling is not a plain `el.value = x`. React tracks a field's value on the DOM node, so a
+direct assignment is silently reverted. The matcher goes through the native `value` setter
+and then dispatches `input` and `change`, which is what makes it work on Ashby's
+React-rendered forms.
+
 ## What it fills
 
 It matches on the **visible label** next to each field, not on the site's internal field
@@ -88,6 +132,17 @@ never uploaded, and the extension makes no network requests of any kind.
 The manifest requests no host permissions. It uses `activeTab`, which grants access to one
 tab, for one click, when you press the button. It is not running in the background on pages
 you visit.
+
+**`chrome.storage.local` is not encrypted.** It sits in plaintext on disk in your Chrome
+profile folder, so anyone with access to your unlocked computer can read it — exactly like
+Chrome's built-in autofill, which stores the same kind of data the same way.
+
+For a name, email, phone and public profile links that is a reasonable trade. Do **not** put
+anything genuinely sensitive in these fields, even when a form asks for it: no Aadhaar, PAN,
+passport number, date of birth or bank details. Type those by hand each time.
+
+Note also that the profile belongs to the browser profile, not to you — on a shared or
+college machine, it stays in that browser after you log out of the website.
 
 ---
 
