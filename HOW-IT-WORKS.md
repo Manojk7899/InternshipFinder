@@ -202,8 +202,10 @@ match on a role that will not consider a fresher is worth nothing.
 - Anything below `minScore` (15) is dropped.
 - Duplicates are collapsed on `company + lowercase title`, keeping the higher score.
 - `firstSeen` comes from `seen.json`, or today if the ID has never been observed.
-  `isNew` is true when `firstSeen` is today. **This is why `seen.json` is committed** — delete
-  it and every job looks new again.
+  **This is why `seen.json` is committed** — delete it and every job looks new again.
+- `isNew` is also written, but both dashboards ignore it and compute the age from
+  `firstSeen` at render time instead. If the daily job fails for two days, a stored
+  `isNew` would be wrong while a computed age stays right.
 - Sort order: new first, then Bangalore, then score descending.
 
 ---
@@ -213,8 +215,32 @@ match on a role that will not consider a fresher is worth nothing.
 `streamlit_app.py` reads `docs/jobs.json` (cached 30 minutes). **Rescan now** calls
 `radar.scan()` live instead, taking about 15 seconds.
 
-Sidebar filters: new today, Bangalore only, fresher-friendly only, minimum score, company,
-and a text search over title and matched skills.
+Sidebar filters: the **first-seen window**, Bangalore only, fresher-friendly only, minimum
+score, company, and a text search over title and matched skills.
+
+### The first-seen window
+
+The window answers "what has turned up since I last looked", and defaults to **Last 3 days**
+rather than today:
+
+| Window | Keeps postings first seen |
+|---|---|
+| Today only | today |
+| **Last 3 days** (default) | today, yesterday, the day before |
+| Last week | the last 7 days |
+| All open roles | no limit |
+
+A today-only view is fragile — skip a Saturday and Friday's finds become invisible among
+hundreds of older rows. The three-day default means missing a day costs nothing.
+
+Age is computed from `firstSeen` against the current date **every time the page renders**,
+never read from a stored flag, so a missed scan cannot leave a stale "NEW" badge behind.
+Postings carry a `NEW` badge on day zero and a `3d ago` badge up to six days old.
+
+Note that this is the date the **radar first saw** the posting, not the date the company
+published it. A board added to `companies.json` today arrives with all of its roles marked
+new. It is also not an archive: a role that gets filled disappears from the next scan
+entirely, so the window shows roles that are both recent **and** still open.
 
 **The application tracker** lets you set a status per role (Not applied → Applied →
 Referral asked → OA/test → Interview → Offer/Rejected). Tracked roles appear on the

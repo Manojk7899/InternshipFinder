@@ -67,8 +67,11 @@ Folder: **`/docs`**. Gives you `https://nrnravi.github.io/JobFinder/`.
 
 ## Using it
 
-Work the **New today** filter first — those are roles posted since yesterday, where
-applying early genuinely matters. Then Bangalore, then Fresher-friendly.
+The view opens on **Last 3 days**, so anything found while you were away is still there —
+missing a day costs nothing. Narrow to **Today only** when you are checking daily, widen to
+**Last week** after a break, and stack **Bangalore** and **Fresher-friendly** on top.
+
+Apply to the newest first: being early genuinely matters on fresher roles.
 
 Set a **status** on any role and it moves to the **My applications** tab. Follow up on
 anything sitting at *Applied* for more than 5 days: a short note to a recruiter or an
