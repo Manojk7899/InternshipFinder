@@ -9,6 +9,18 @@ dashboard with an application tracker.
 
 No API keys. No login. No account to connect. No laptop has to stay on.
 
+**▶ Live dashboard: https://nrnjobfinder.streamlit.app/**
+
+---
+
+## Documentation
+
+- **[HOW-IT-WORKS.md](HOW-IT-WORKS.md)** — the full picture: data sources, every filter, how
+  the match score is calculated (with a worked example), the daily job, and known limitations.
+- **[The Volume Track playbook](docs/playbook.html)** — the manual half of the search: the
+  service-company drives and portal alerts this radar cannot see. Served at
+  `https://nrnravi.github.io/JobFinder/playbook.html` when Pages is enabled.
+
 ---
 
 ## The two pieces
@@ -35,12 +47,11 @@ always-on fallback — Streamlit apps sleep when idle and take a few seconds to 
 
 ### 2. Streamlit Community Cloud (the dashboard)
 
-1. Go to **share.streamlit.io** and sign in with GitHub.
-2. **Create app → Deploy a public app from GitHub**:
-   - Repository: `nrnravi/JobFinder`
-   - Branch: `main`
-   - Main file path: `streamlit_app.py`
-3. Deploy. You get a permanent URL — bookmark it on your phone.
+Already deployed at **https://nrnjobfinder.streamlit.app/** — bookmark it on your phone.
+
+To redeploy from scratch: **share.streamlit.io** → sign in with GitHub → **Create app →
+Deploy a public app from GitHub**, repository `nrnravi/JobFinder`, branch `main`, main file
+path `streamlit_app.py`.
 
 It redeploys automatically whenever the daily scan commits new jobs.
 

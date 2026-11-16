@@ -1,0 +1,332 @@
+<title>Volume Track Playbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: single reading column; setup steps are a true sequence, so they are numbered.
+     Weekly rhythm is a cycle, so it is not. */
+  :root{
+    --paper:#f7f8fa;
+    --card:#ffffff;
+    --ink:#161a21;
+    --muted:#5c6673;
+    --line:#dfe3e9;
+    --accent:#1a4fd6;      /* links, step numbers */
+    --flag:#b45309;        /* deadlines and warnings */
+    --flag-bg:#fdf5e9;
+    --done:#0f7a4d;
+    --mono-bg:#eef1f6;
+    --font-display:"Bitter",Georgia,"Times New Roman",serif;
+    --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0f1319; --card:#171c24; --ink:#e7ecf3; --muted:#98a3b2;
+      --line:#2a323d; --accent:#7ba4ff; --flag:#f0b457; --flag-bg:#2a2113;
+      --done:#4ddb96; --mono-bg:#1e242d; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0f1319; --card:#171c24; --ink:#e7ecf3; --muted:#98a3b2;
+    --line:#2a323d; --accent:#7ba4ff; --flag:#f0b457; --flag-bg:#2a2113;
+    --done:#4ddb96; --mono-bg:#1e242d; color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.6;
+  }
+  .wrap{
+    max-width:720px; margin:0 auto;
+    padding-left:max(16px, env(safe-area-inset-left, 0px));
+    padding-right:max(16px, env(safe-area-inset-right, 0px));
+    padding-block:32px 64px;
+  }
+
+  header{border-bottom:2px solid var(--ink); padding-bottom:18px; margin-bottom:28px}
+  .eyebrow{
+    font-size:12px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--muted); font-weight:600; margin:0 0 8px;
+  }
+  h1{
+    font-family:var(--font-display); font-weight:700; font-size:clamp(28px,6vw,40px);
+    line-height:1.15; margin:0 0 10px; text-wrap:balance; letter-spacing:-.01em;
+  }
+  .lede{margin:0; color:var(--muted); font-size:16px; max-width:60ch}
+
+  h2{
+    font-family:var(--font-display); font-weight:700;
+    font-size:clamp(20px,4vw,25px); line-height:1.25;
+    margin:44px 0 6px; text-wrap:balance;
+  }
+  h2 .n{color:var(--accent); font-variant-numeric:tabular-nums; margin-right:.4em}
+  h3{font-size:16px; font-weight:600; margin:26px 0 6px}
+  p{margin:0 0 14px; max-width:65ch}
+  a{color:var(--accent)}
+  .sub{color:var(--muted); font-size:14px; margin:0 0 18px}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px; margin:16px 0;
+  }
+
+  ul,ol{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:7px}
+  li::marker{color:var(--muted)}
+
+  .check{list-style:none; padding-left:0}
+  .check li{display:flex; gap:11px; align-items:flex-start; margin-bottom:11px}
+  .check input{
+    appearance:none; flex:0 0 auto; width:19px; height:19px; margin-top:3px;
+    border:1.5px solid var(--line); border-radius:5px; background:var(--card); cursor:pointer;
+  }
+  .check input:checked{background:var(--done); border-color:var(--done)}
+  .check input:checked::after{
+    content:"✓"; display:block; color:#fff; font-size:13px; line-height:16px; text-align:center;
+  }
+  .check input:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .check input:checked + span{color:var(--muted); text-decoration:line-through}
+  .check span{min-width:0}
+
+  .snip{
+    display:flex; gap:10px; align-items:flex-start;
+    background:var(--mono-bg); border-radius:8px; padding:11px 13px; margin:10px 0;
+  }
+  .snip code{
+    font-family:var(--font-mono); font-size:13.5px; line-height:1.5;
+    min-width:0; overflow-wrap:anywhere; flex:1;
+  }
+  .snip button{
+    flex:0 0 auto; font-family:var(--font-body); font-size:12px; font-weight:600;
+    border:1px solid var(--line); background:var(--card); color:var(--ink);
+    border-radius:6px; padding:5px 10px; cursor:pointer;
+  }
+  .snip button:hover{border-color:var(--accent); color:var(--accent)}
+
+  .flag{
+    background:var(--flag-bg); border-left:3px solid var(--flag);
+    border-radius:0 8px 8px 0; padding:13px 16px; margin:18px 0;
+  }
+  .flag strong{color:var(--flag)}
+  .flag p{margin:0; font-size:15px}
+
+  .tbl{overflow-x:auto; margin:14px 0}
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:420px}
+  th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:600}
+  td:first-child{font-weight:600; white-space:nowrap}
+
+  .rhythm{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); margin:16px 0}
+  .rhythm .card{margin:0}
+  .rhythm .when{
+    font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--accent); font-weight:600; margin:0 0 6px;
+  }
+  .rhythm p{font-size:14.5px; margin:0}
+
+  footer{margin-top:52px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13.5px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Bangalore · 2026 batch</p>
+  <h1>The Volume Track</h1>
+  <p class="lede">
+    The job radar watches product companies with public job boards. It cannot see the
+    mass-hiring drives that service companies run, and those are the ones most likely to
+    produce a first offer quickly. This is the part that has to be set up by hand — once,
+    in about forty minutes.
+  </p>
+</header>
+
+<div class="flag">
+  <p>
+    <strong>Dates are deliberately absent.</strong> Drive windows and batch eligibility change
+    every few weeks, and the aggregator sites that republish them contradict each other
+    constantly. Register on the official portals below and let their alerts tell you when a
+    window opens. Treat any third-party "drive announced" post as a prompt to go check the
+    official portal, never as the source.
+  </p>
+</div>
+
+<h2><span class="n">1</span>Register on the company portals</h2>
+<p class="sub">
+  Service companies do not post fresher roles on LinkedIn or Naukri in any reliable way.
+  They open a registration window on their own portal, run an aptitude test, and close it.
+  If the profile is not already created, the window is usually gone before the form is done.
+</p>
+
+<ul class="check" id="c-portals">
+  <li><input type="checkbox" id="p1"><span><strong>TCS</strong> — create a NextStep profile and complete it fully; off-campus applicants also go through iBegin. The NQT (National Qualifier Test) is the single test that feeds most TCS fresher hiring, so this is the highest-value registration of the set.</span></li>
+  <li><input type="checkbox" id="p2"><span><strong>Infosys</strong> — register on the Infosys careers portal and watch for the InfyTQ and off-campus listings.</span></li>
+  <li><input type="checkbox" id="p3"><span><strong>Wipro</strong> — the Elite NTH and Turbo hiring tracks are the fresher routes; both open through the Wipro careers site.</span></li>
+  <li><input type="checkbox" id="p4"><span><strong>Accenture</strong> — create a profile and set a job alert for Bangalore, Associate Software Engineer.</span></li>
+  <li><input type="checkbox" id="p5"><span><strong>Cognizant, Capgemini, LTIMindtree, Mphasis, Hexaware, Persistent</strong> — same pattern, one profile each.</span></li>
+  <li><input type="checkbox" id="p6"><span><strong>Deloitte USI, EY, PwC, KPMG</strong> — large Bangalore technology practices that hire freshers into analyst roles and are usually overlooked by CS graduates.</span></li>
+</ul>
+
+<div class="flag">
+  <p>
+    <strong>Never pay for a job.</strong> No legitimate employer in India charges a fresher a
+    registration, training or security deposit. Any "pay ₹X to confirm your offer" message is a
+    scam, including ones that arrive on letterhead with a real company's logo.
+  </p>
+</div>
+
+<h2><span class="n">2</span>Set up the alert portals</h2>
+<p class="sub">
+  These do carry fresher postings, and their alerts are reliable enough to replace daily
+  manual checking.
+</p>
+
+<div class="tbl">
+<table>
+  <thead><tr><th>Portal</th><th>What it is good for</th><th>Set up</th></tr></thead>
+  <tbody>
+    <tr><td>Naukri</td><td>The largest volume of Indian fresher postings</td><td>Full profile, then 3 saved searches with daily email alerts</td></tr>
+    <tr><td>Unstop</td><td>Hackathons, contests and campus-style hiring challenges</td><td>Profile + follow the companies she wants</td></tr>
+    <tr><td>Instahyre</td><td>Startup roles, recruiters approach directly</td><td>Profile, mark open to opportunities</td></tr>
+    <tr><td>Cutshort</td><td>Skill-matched startup roles</td><td>Profile with Python, React, FastAPI tagged</td></tr>
+    <tr><td>Wellfound</td><td>Startups, including remote</td><td>Profile + India filter</td></tr>
+    <tr><td>Internshala</td><td>Fresher jobs as well as internships</td><td>Alerts for Bangalore + Python/Django</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>The three Naukri searches worth saving</h3>
+<p>Save each as its own alert rather than one broad search — the results differ more than they look.</p>
+
+<div class="snip">
+  <code id="q1">("software engineer" OR "software developer" OR SDE) AND (fresher OR "0-1 years" OR trainee) AND Bangalore</code>
+  <button type="button" data-copy="q1">Copy</button>
+</div>
+<div class="snip">
+  <code id="q2">(python OR django OR fastapi OR flask) AND (fresher OR "0-1 years") AND (Bangalore OR Bengaluru)</code>
+  <button type="button" data-copy="q2">Copy</button>
+</div>
+<div class="snip">
+  <code id="q3">("machine learning" OR "generative ai" OR "ai engineer" OR "data scientist") AND (fresher OR trainee OR "0-1 years") AND Bangalore</code>
+  <button type="button" data-copy="q3">Copy</button>
+</div>
+
+<p>
+  Set each to <strong>daily</strong>, not instant — instant alerts train you to ignore them.
+  Send them all to one Gmail label so the morning check is a single place.
+</p>
+
+<h2><span class="n">3</span>Prepare the answers once</h2>
+<p class="sub">
+  Every one of these portals asks the same twelve questions. Writing the answers once and
+  keeping them in a notes file turns a 20-minute application into a 3-minute one, which is
+  the difference between applying to four drives and applying to one.
+</p>
+
+<ul class="check" id="c-kit">
+  <li><input type="checkbox" id="k1"><span>Both resume PDFs, named <code>YourName_Fullstack.pdf</code> and <code>YourName_AI_ML.pdf</code></span></li>
+  <li><input type="checkbox" id="k2"><span>A 60-word and a 150-word "about me" paragraph</span></li>
+  <li><input type="checkbox" id="k3"><span>10th, 12th and current CGPA, plus percentage equivalents — most forms demand percentage</span></li>
+  <li><input type="checkbox" id="k4"><span>Scanned 10th and 12th marksheets, Aadhaar, PAN and a passport photo, in one folder</span></li>
+  <li><input type="checkbox" id="k5"><span>A one-line summary of each project, ready to paste</span></li>
+  <li><input type="checkbox" id="k6"><span>Preferred location, notice period (immediate) and expected CTC — say "as per company standards" as a fresher</span></li>
+</ul>
+
+<h2><span class="n">4</span>The weekly rhythm</h2>
+<p class="sub">Once set up, this is the whole routine. It should take about two hours a day.</p>
+
+<div class="rhythm">
+  <div class="card">
+    <p class="when">Every morning</p>
+    <p>Open the radar dashboard, apply to the new matches. Then clear the Gmail alert label.</p>
+  </div>
+  <div class="card">
+    <p class="when">Every morning</p>
+    <p>Ten referral messages. Alumni from your own college first — they reply far more often than strangers.</p>
+  </div>
+  <div class="card">
+    <p class="when">Every evening</p>
+    <p>Ninety minutes of DSA and core CS. The drives are filtered by an aptitude test, not a resume.</p>
+  </div>
+  <div class="card">
+    <p class="when">Every Monday</p>
+    <p>Check the six company portals directly for a newly opened window.</p>
+  </div>
+  <div class="card">
+    <p class="when">Every Friday</p>
+    <p>Follow up on anything applied to more than five days ago and still silent.</p>
+  </div>
+  <div class="card">
+    <p class="when">Every Sunday</p>
+    <p>One GitHub commit or one LinkedIn post about a project. Recruiters check both.</p>
+  </div>
+</div>
+
+<h2><span class="n">5</span>What actually converts</h2>
+<p>
+  Worth being blunt about the arithmetic, because it changes where the two hours go. A cold
+  portal application from a fresher converts at roughly one interview per hundred. A referral
+  from someone inside the company converts at something closer to one in ten. The drives are a
+  third thing again: they are a test, so preparation beats application volume entirely.
+</p>
+<p>
+  That means the ten referral messages a day matter more than the next fifty applications, and
+  the ninety minutes of aptitude practice matter more than both. The radar exists so that
+  finding jobs stops eating the time those two need.
+</p>
+
+<div class="flag">
+  <p>
+    <strong>One more thing worth doing this week.</strong> If your resume's project entries carry no live
+    links, add them. For a fresher with no full-time experience, a working demo link is the single strongest signal available — it is the thing a
+    reviewer can check in ten seconds. Filling those in is worth more than any alert on this page.
+  </p>
+</div>
+
+<footer>
+  Progress on this page is saved in this browser only — it will not follow to another device.
+  The job radar covers the other track: product companies with public job boards, scanned daily.
+ The radar dashboard lives at
+  <a href="https://nrnjobfinder.streamlit.app/">nrnjobfinder.streamlit.app</a>.
+</footer>
+</div>
+
+<script>
+  // Checkbox state, per viewer, best-effort.
+  var KEY = "volume-track-v1";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+
+  var boxes = document.querySelectorAll('.check input[type="checkbox"]');
+  Array.prototype.forEach.call(boxes, function (b) {
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function () {
+      state[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    });
+  });
+
+  // Copy buttons, with a selection fallback where the clipboard is refused.
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.getElementById(btn.getAttribute("data-copy"));
+      if (!el) return;
+      var done = function () {
+        var was = btn.textContent;
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = was; }, 1400);
+      };
+      try {
+        navigator.clipboard.writeText(el.textContent).then(done, function () { select(el); });
+      } catch (e) { select(el); }
+    });
+  });
+
+  function select(el) {
+    var r = document.createRange();
+    r.selectNodeContents(el);
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+  }
+</script>
