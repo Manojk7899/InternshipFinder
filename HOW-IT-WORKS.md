@@ -1,10 +1,23 @@
 # How Job Radar works
 
-Everything the app does, end to end: where the jobs come from, what gets thrown away,
+Everything the radar does, end to end: where the jobs come from, what gets thrown away,
 how the match score is calculated, and how to change any of it.
 
 - **Live dashboard:** https://nrnjobfinder.streamlit.app/
 - **Static fallback:** `https://nrnravi.github.io/JobFinder/` (if GitHub Pages is enabled)
+
+The job search has three parts, and this document covers the first. The other two have
+their own docs, which this one does not duplicate:
+
+| Part | What it does | Where it is documented |
+|---|---|---|
+| **Find** | Scans job boards daily, filters and ranks | this document |
+| **Apply** | Fills the routine fields on an application form | [prefill/README.md](prefill/README.md) |
+| **The manual track** | Service-company drives and portal alerts no scanner can reach | [docs/playbook.html](docs/playbook.html) |
+
+They are deliberately separate. The radar finds jobs and never applies to them; the
+extension fills forms and never submits them; the playbook is the part that stays human
+because no automation reaches it. Section 9 explains why those lines are where they are.
 
 ---
 
@@ -25,6 +38,12 @@ There are two moving parts and one data file between them.
             streamlit_app.py                                  docs/index.html
             (Streamlit Cloud)                                 (GitHub Pages)
             filters + tracker                                 read-only fallback
+                        │
+                        │  she opens a role's apply page
+                        ▼
+            prefill/  (Chrome extension, runs only when clicked)
+            fills name / email / links / notice period
+            → she reviews, answers the real questions, submits herself
 ```
 
 `radar.py` is the whole engine. The Streamlit app imports it, so "Rescan now" in the UI
@@ -42,6 +61,8 @@ can drift out of sync.
 | `docs/index.html` | Static dashboard for GitHub Pages. |
 | `tools/find_board.py` | Discovers a company's board token. |
 | `.github/workflows/radar.yml` | The daily schedule. |
+| `docs/playbook.html` | The manual track: drives and portal alerts the radar cannot see. |
+| `prefill/` | Chrome extension that fills application forms. Own README. |
 
 ---
 
@@ -304,6 +325,34 @@ than most Indian startups on the list.
   worth pruning entries older than a few months.
 - **No deduplication across companies**, only within one. The same role cross-posted by two
   staffing firms would appear twice.
+
+### Why nothing here applies for you
+
+The radar reads job boards and stops. The extension fills forms and stops. Neither submits
+anything, and that boundary is deliberate.
+
+Reading these boards is explicitly permitted. Greenhouse's `robots.txt` disallows only
+`/embed/`; Lever's sets `Allow: /` with `Content-Signal: search=yes, use=reference`. The
+radar uses each provider's documented public job-board API.
+
+Submitting is a different matter. Checked directly on live apply pages:
+
+| Provider | On the apply form |
+|---|---|
+| Lever | reCAPTCHA and hCaptcha, Cloudflare Bot Management (`__cf_bm` cookie) |
+| Ashby | reCAPTCHA, Cloudflare |
+| Greenhouse | reCAPTCHA |
+
+Automating past that means defeating captcha and bot detection. It risks the account, and
+because Cloudflare blocks by IP it can lock you out of applying by hand from the same
+connection. LinkedIn and Naukri prohibit automated applying outright, and a restricted
+LinkedIn account costs a new graduate far more than any volume of applications gains.
+
+It would also not help. The questions that decide a fresher application — why this company,
+what you built, your availability — are the ones a bot answers badly and a reviewer spots
+instantly. Three hundred generic applications perform worse than twenty considered ones.
+
+So the automation stops at the point where a human adds the value.
 
 ---
 
