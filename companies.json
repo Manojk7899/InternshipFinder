@@ -1,0 +1,6 @@
+{
+  "_comment": "Verified public job-board endpoints. Add more by running: node tools/find-board.mjs <company-name>",
+  "greenhouse": ["netradyne", "devrev", "hackerrank", "druva", "slice", "observeai", "groww", "porter"],
+  "lever": ["paytm", "meesho", "hevodata", "zeta", "porter", "mindtickle", "cred"],
+  "ashby": ["Sarvam", "Atlan", "Navi"]
+}

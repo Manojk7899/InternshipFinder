@@ -1,0 +1,23 @@
+{
+  "_comment": "Tune these freely. positive = points added when the phrase appears in title/description.",
+  "skills": {
+    "python": 6, "react": 6, "fastapi": 7, "django": 6, "flask": 5,
+    "javascript": 4, "typescript": 3, "node": 3, "rest api": 4, "sql": 3,
+    "mysql": 3, "mongodb": 3, "kotlin": 5, "android": 5,
+    "machine learning": 6, "tensorflow": 5, "pytorch": 5, "scikit": 5,
+    "generative ai": 8, "genai": 8, "llm": 7, "computer vision": 6,
+    "opencv": 5, "ai engineer": 7, "deep learning": 5, "pandas": 3, "numpy": 3,
+    "aws": 3, "git": 2, "full stack": 6, "fullstack": 6, "backend": 4, "frontend": 4
+  },
+  "fresherSignals": {
+    "fresher": 25, "0-1 year": 25, "0-2 year": 22, "1-2 year": 18,
+    "graduate engineer": 25, "campus": 20, "entry level": 22, "entry-level": 22,
+    "trainee": 20, "associate software engineer": 20, "junior": 18,
+    "sde 1": 18, "sde-1": 18, "sde i": 15, "software engineer i": 15,
+    "new grad": 25, "early career": 20, "intern": 10
+  },
+  "locationBoost": { "bangalore": 20, "bengaluru": 20, "india": 10, "remote": 6, "hyderabad": 4, "pune": 4, "chennai": 4, "mumbai": 4, "delhi": 4, "gurgaon": 4, "noida": 4 },
+  "disqualify": ["staff engineer", "principal engineer", "engineering manager", "director", "vp ", "head of", "architect", "senior staff", "distinguished"],
+  "seniorityPenalty": { "senior": -30, "lead ": -25, "sr. ": -30, "sr ": -25, "5+ years": -30, "6+ years": -35, "7+ years": -40, "8+ years": -40, "10+ years": -45, "manager": -25 },
+  "minScore": 15
+}

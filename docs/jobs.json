@@ -1,0 +1,673 @@
+{
+ "updated": "2026-11-16T09:13:55.228Z",
+ "count": 35,
+ "jobs": [
+  {
+   "id": "lv-hevodata-6cbbe304-e065-4711-bf3e-756795d2bc2a",
+   "company": "hevodata",
+   "title": "SDE I",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/6cbbe304-e065-4711-bf3e-756795d2bc2a",
+   "posted": "2026-07-27",
+   "score": 91,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "typescript",
+    "rest api"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-hevodata-993a3ed3-3014-432f-b0f4-28d300d58d9a",
+   "company": "hevodata",
+   "title": "Associate Software Development Engineer (SDE) Intern",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/993a3ed3-3014-432f-b0f4-28d300d58d9a",
+   "posted": "2026-09-21",
+   "score": 76,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "typescript",
+    "rest api"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-netradyne-4729961005",
+   "company": "netradyne",
+   "title": "Database Engineer",
+   "location": "Bengaluru, Karnataka, India",
+   "url": "https://www.netradyne.com/company/careers?gh_jid=4729961005",
+   "posted": "2026-10-30",
+   "score": 68,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "mongodb",
+    "computer vision",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-hevodata-95ab9f01-3671-4073-9990-4418aecb24e7",
+   "company": "hevodata",
+   "title": "Business System Engineer",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/95ab9f01-3671-4073-9990-4418aecb24e7",
+   "posted": "2026-09-17",
+   "score": 60,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "sql",
+    "llm",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-cred-9a746e68-0858-4190-9144-54b19a2cbf2c",
+   "company": "cred",
+   "title": "cloud security engineer",
+   "location": "bengaluru",
+   "url": "https://jobs.lever.co/cred/9a746e68-0858-4190-9144-54b19a2cbf2c",
+   "posted": "2026-01-29",
+   "score": 58,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "llm",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-f09b6a35-e2d1-4833-8bc5-2b495991d882",
+   "company": "Sarvam",
+   "title": "Infrastructure Engineer",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/f09b6a35-e2d1-4833-8bc5-2b495991d882",
+   "posted": "2026-10-26",
+   "score": 57,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "llm",
+    "aws",
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-8281055",
+   "company": "hackerrank",
+   "title": "AI Researcher Intern",
+   "location": "Onsite in Bangalore",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8281055",
+   "posted": "2026-11-11",
+   "score": 56,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "machine learning",
+    "pytorch",
+    "deep learning"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-hevodata-ee02ca24-94ec-415b-ab36-7dec4d62099b",
+   "company": "hevodata",
+   "title": "Solutions Engineer",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/ee02ca24-94ec-415b-ab36-7dec4d62099b",
+   "posted": "2026-05-18",
+   "score": 54,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "sql",
+    "mysql",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-8273522",
+   "company": "hackerrank",
+   "title": "Deep Learning Research Engineer",
+   "location": "Hybrid in Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8273522",
+   "posted": "2026-11-12",
+   "score": 53,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "machine learning",
+    "pytorch",
+    "llm",
+    "deep learning"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-8127535",
+   "company": "hackerrank",
+   "title": "Customer Experience Engineer, L1",
+   "location": "Hybrid in Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8127535",
+   "posted": "2026-10-09",
+   "score": 52,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "javascript",
+    "rest api",
+    "sql"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-cred-b3da0ae4-d0a8-45ce-a1e5-73be12b4bfe3",
+   "company": "cred",
+   "title": "threat detection engineer",
+   "location": "bengaluru",
+   "url": "https://jobs.lever.co/cred/b3da0ae4-d0a8-45ce-a1e5-73be12b4bfe3",
+   "posted": "2026-01-29",
+   "score": 51,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-6993983",
+   "company": "hackerrank",
+   "title": "Customer Experience Engineer, L2",
+   "location": "Hybrid in Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/6993983",
+   "posted": "2026-10-10",
+   "score": 43,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "rest api",
+    "sql"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-8229735",
+   "company": "hackerrank",
+   "title": "Software Development Engineer Intern",
+   "location": "Onsite in Bangalore",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735",
+   "posted": "2026-10-15",
+   "score": 40,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-hackerrank-7461142",
+   "company": "hackerrank",
+   "title": "Forward Deployed Engineer",
+   "location": "Hybrid in Bengaluru, India",
+   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/7461142",
+   "posted": "2026-10-14",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-fcb15601-6440-41f7-aa79-b9992057a4b2",
+   "company": "Sarvam",
+   "title": "Platform Engineer - AI Infrastructure",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/fcb15601-6440-41f7-aa79-b9992057a4b2",
+   "posted": "2026-06-29",
+   "score": 34,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "node"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-d2d593e6-be5a-4431-b1fa-86f18d1c7edf",
+   "company": "Sarvam",
+   "title": "DevOps Engineer",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/d2d593e6-be5a-4431-b1fa-86f18d1c7edf",
+   "posted": "2026-08-28",
+   "score": 34,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "node",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-0371342b-5cb8-487b-9310-4d0eb5b37f47",
+   "company": "Sarvam",
+   "title": "Software Engineer - Model API Platform",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/0371342b-5cb8-487b-9310-4d0eb5b37f47",
+   "posted": "2026-10-13",
+   "score": 34,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "sql",
+    "llm",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-db89b576-2456-4cc4-ab0b-c45f8c6c27f0",
+   "company": "Sarvam",
+   "title": "Software Development Engineer - Tejas",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/db89b576-2456-4cc4-ab0b-c45f8c6c27f0",
+   "posted": "2026-10-23",
+   "score": 34,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "sql",
+    "llm",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6166569004",
+   "company": "devrev",
+   "title": "Solution Engineer : Bangalore",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6166569004",
+   "posted": "2026-11-11",
+   "score": 30,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-cred-913a6616-78c9-4ca3-8c92-67ddea8a80df",
+   "company": "cred",
+   "title": "fraud analyst",
+   "location": "bengaluru",
+   "url": "https://jobs.lever.co/cred/913a6616-78c9-4ca3-8c92-67ddea8a80df",
+   "posted": "2026-11-05",
+   "score": 29,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-observeai-5432596008",
+   "company": "observeai",
+   "title": "AI Agent Engineer",
+   "location": "Bengaluru ",
+   "url": "https://www.observe.ai/position?gh_jid=5432596008",
+   "posted": "2026-11-08",
+   "score": 27,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "llm"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-36f89b00-2010-4d23-aae3-17a2f53d9eaa",
+   "company": "Sarvam",
+   "title": "Agent Engineer",
+   "location": "Bengaluru",
+   "url": "https://jobs.ashbyhq.com/sarvam/36f89b00-2010-4d23-aae3-17a2f53d9eaa",
+   "posted": "2026-08-20",
+   "score": 20,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6196802004",
+   "company": "devrev",
+   "title": "Forward Deployed Engineer {Chennai}",
+   "location": "Chennai, India",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196802004",
+   "posted": "2026-11-05",
+   "score": 45,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "sql",
+    "generative ai",
+    "llm"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6196801004",
+   "company": "devrev",
+   "title": "Forward Deployed Engineer  {Mumbai}",
+   "location": "Mumbai, India",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196801004",
+   "posted": "2026-11-05",
+   "score": 45,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "sql",
+    "generative ai",
+    "llm"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-5722574004",
+   "company": "devrev",
+   "title": "Software Engineer - Applied AI ",
+   "location": "Philippines Remote",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/5722574004",
+   "posted": "2026-09-25",
+   "score": 37,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "sql",
+    "generative ai",
+    "llm"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-slice-8300434",
+   "company": "slice",
+   "title": "Software Developer, DevEx (Stateful Systems)",
+   "location": "Remote - UK or North Macedonia",
+   "url": "https://slice.careers/careers-listing?gh_jid=8300434",
+   "posted": "2026-10-30",
+   "score": 37,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "generative ai",
+    "aws",
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6180279004",
+   "company": "devrev",
+   "title": "Forward Deployed Engineer",
+   "location": "Delhi, NCR",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6180279004",
+   "posted": "2026-11-05",
+   "score": 35,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "sql",
+    "generative ai",
+    "llm"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6196805004",
+   "company": "devrev",
+   "title": "Forward Deployed AI Strategist {Chennai}",
+   "location": "Chennai, India",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196805004",
+   "posted": "2026-09-25",
+   "score": 32,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "generative ai",
+    "ai engineer",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-mindtickle-68626a39-ae90-4870-b3c7-04bf489f66f7",
+   "company": "mindtickle",
+   "title": "Customer Support Engineer - I",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/68626a39-ae90-4870-b3c7-04bf489f66f7",
+   "posted": "2026-11-04",
+   "score": 28,
+   "fresher": true,
+   "years": 2,
+   "bangalore": false,
+   "skills": [
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-6139498004",
+   "company": "devrev",
+   "title": "Solution Engineer : Mumbai",
+   "location": "Mumbai, India",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/6139498004",
+   "posted": "2026-09-25",
+   "score": 27,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-paytm-ad781ae8-cd4a-44c1-a74b-2822118b7c3d",
+   "company": "paytm",
+   "title": "Credit Risk Analyst",
+   "location": "Noida, Uttar Pradesh",
+   "url": "https://jobs.lever.co/paytm/ad781ae8-cd4a-44c1-a74b-2822118b7c3d",
+   "posted": "2025-08-08",
+   "score": 21,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "machine learning",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-devrev-5831999004",
+   "company": "devrev",
+   "title": "Solution Engineer : Delhi",
+   "location": "India Remote",
+   "url": "https://job-boards.greenhouse.io/devrev/jobs/5831999004",
+   "posted": "2026-09-25",
+   "score": 20,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-mindtickle-3ce036e8-d4f9-4086-bec4-186676ea109e",
+   "company": "mindtickle",
+   "title": "SME Engineer IT",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/3ce036e8-d4f9-4086-bec4-186676ea109e",
+   "posted": "2026-07-17",
+   "score": 18,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "llm",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "lv-mindtickle-d62b36db-b088-48c7-a606-4ed458e30208",
+   "company": "mindtickle",
+   "title": "Security and Automation Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/d62b36db-b088-48c7-a606-4ed458e30208",
+   "posted": "2026-08-21",
+   "score": 17,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Sarvam-b2201b5e-1e96-497a-962c-bca1768f75fd",
+   "company": "Sarvam",
+   "title": "Embedded Infrastructure Engineer, Chanakya",
+   "location": "Delhi",
+   "url": "https://jobs.ashbyhq.com/sarvam/b2201b5e-1e96-497a-962c-bca1768f75fd",
+   "posted": "2026-04-17",
+   "score": 16,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "mongodb"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  }
+ ]
+}
