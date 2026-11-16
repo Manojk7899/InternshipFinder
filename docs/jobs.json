@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16T09:38:42.601010+00:00",
- "count": 34,
+ "updated": "2026-11-16T09:44:56.165071+00:00",
+ "count": 81,
  "jobs": [
   {
    "id": "lv-hevodata-6cbbe304-e065-4711-bf3e-756795d2bc2a",
@@ -17,6 +17,28 @@
     "python",
     "typescript",
     "rest api"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-entrupy-4796804007",
+   "company": "entrupy",
+   "title": "ML Intern",
+   "location": "Bangalore, India",
+   "url": "https://www.entrupy.com/careers/apply/?gh_jid=4796804007",
+   "posted": "2026-07-15",
+   "score": 80,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "machine learning",
+    "pytorch",
+    "computer vision",
+    "opencv",
+    "git"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -63,6 +85,27 @@
    "isNew": true
   },
   {
+   "id": "lv-fampay-bbbbbfd2-1855-4991-82d5-84ef57607c24",
+   "company": "fampay",
+   "title": "Security Engineer Intern",
+   "location": "Bengaluru",
+   "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24",
+   "posted": "2026-09-23",
+   "score": 61,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "javascript",
+    "sql",
+    "android",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "lv-hevodata-95ab9f01-3671-4073-9990-4418aecb24e7",
    "company": "hevodata",
    "title": "Business System Engineer",
@@ -100,6 +143,27 @@
     "llm",
     "aws",
     "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-okta-8195169",
+   "company": "okta",
+   "title": "Workday Extend Developer ",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/8195169?gh_jid=8195169",
+   "posted": "2026-11-13",
+   "score": 57,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "javascript",
+    "typescript",
+    "rest api",
+    "generative ai",
+    "aws"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -223,6 +287,173 @@
    "isNew": true
   },
   {
+   "id": "gh-turing-6252155004",
+   "company": "turing",
+   "title": "Growth Analyst (Paid Acquisition)",
+   "location": "Bengaluru, Karnataka, India",
+   "url": "https://job-boards.greenhouse.io/turing/jobs/6252155004",
+   "posted": "2026-11-07",
+   "score": 50,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8924923002",
+   "company": "gitlab",
+   "title": "Intermediate Data Engineer",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8924923002",
+   "posted": "2026-11-06",
+   "score": 46,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-elastic-8314336",
+   "company": "elastic",
+   "title": "AI Tool Admin",
+   "location": "Bangalore, India",
+   "url": "https://jobs.elastic.co/jobs?gh_jid=8314336&gh_jid=8314336",
+   "posted": "2026-10-27",
+   "score": 45,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "generative ai",
+    "ai engineer"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-elastic-8247206",
+   "company": "elastic",
+   "title": "Agentic AI Engineer",
+   "location": "Bangalore, India",
+   "url": "https://jobs.elastic.co/jobs?gh_jid=8247206&gh_jid=8247206",
+   "posted": "2026-11-11",
+   "score": 44,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "llm",
+    "ai engineer"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-sigmoid-8829803002",
+   "company": "sigmoid",
+   "title": "Database Migration Engineer",
+   "location": "Bengaluru, Karnataka, India",
+   "url": "https://job-boards.greenhouse.io/sigmoid/jobs/8829803002",
+   "posted": "2026-09-22",
+   "score": 42,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-mongodb-8143980",
+   "company": "mongodb",
+   "title": "Application Engineer",
+   "location": "Bengaluru",
+   "url": "https://www.mongodb.com/careers/job/?gh_jid=8143980",
+   "posted": "2026-11-12",
+   "score": 42,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "mongodb",
+    "genai",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-databricks-8829029002",
+   "company": "databricks",
+   "title": "Software Engineer, Infrastructure",
+   "location": "Bengaluru, India",
+   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8829029002",
+   "posted": "2026-11-13",
+   "score": 41,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-mongodb-8007613",
+   "company": "mongodb",
+   "title": "Technical Services Engineer",
+   "location": "Bengaluru",
+   "url": "https://www.mongodb.com/careers/job/?gh_jid=8007613",
+   "posted": "2026-11-12",
+   "score": 41,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "javascript",
+    "node",
+    "mongodb"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5261002007",
+   "company": "zscaler",
+   "title": "Business Support Analyst (LMS Admin)",
+   "location": "Bangalore, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5261002007",
+   "posted": "2026-11-04",
+   "score": 41,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "generative ai",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "gh-hackerrank-8229735",
    "company": "hackerrank",
    "title": "Software Development Engineer Intern",
@@ -234,6 +465,148 @@
    "years": 0,
    "bangalore": true,
    "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8031833",
+   "company": "stripe",
+   "title": "Software Engineer, Intern",
+   "location": "Bengaluru",
+   "url": "https://stripe.com/jobs/search?gh_jid=8031833",
+   "posted": "2026-10-29",
+   "score": 40,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8905402002",
+   "company": "gitlab",
+   "title": "Intermediate Backend Engineer, Authorization",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8905402002",
+   "posted": "2026-11-06",
+   "score": 40,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "rest api",
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8775507002",
+   "company": "gitlab",
+   "title": "Intermediate Backend Engineer, India",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775507002",
+   "posted": "2026-11-06",
+   "score": 40,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git",
+    "backend",
+    "frontend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8864819002",
+   "company": "gitlab",
+   "title": "Benefits Analyst",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8864819002",
+   "posted": "2026-11-06",
+   "score": 39,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "llm",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-okta-7770733",
+   "company": "okta",
+   "title": "Developer Support Engineer",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/7770733?gh_jid=7770733",
+   "posted": "2026-11-13",
+   "score": 38,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "node"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-okta-6839581",
+   "company": "okta",
+   "title": "Solution Engineer",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/6839581?gh_jid=6839581",
+   "posted": "2026-11-13",
+   "score": 38,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "javascript",
+    "frontend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8867756002",
+   "company": "gitlab",
+   "title": "Site Reliability Engineer, Cells Infrastructure",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8867756002",
+   "posted": "2026-11-09",
+   "score": 38,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "sql",
+    "aws",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-7543868",
+   "company": "stripe",
+   "title": "Software Engineer, Financial Business Insights",
+   "location": "Bengaluru, India",
+   "url": "https://stripe.com/jobs/search?gh_jid=7543868",
+   "posted": "2026-10-29",
+   "score": 37,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
    "firstSeen": "2026-11-16",
    "isNew": true
   },
@@ -250,6 +623,109 @@
    "bangalore": true,
    "skills": [
     "python"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-okta-7626222",
+   "company": "okta",
+   "title": "AP & Expenses Projects Analyst",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/7626222?gh_jid=7626222",
+   "posted": "2026-11-13",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8890971002",
+   "company": "gitlab",
+   "title": "Intermediate Backend Engineer , Security Factory",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8890971002",
+   "posted": "2026-11-06",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8916232002",
+   "company": "gitlab",
+   "title": "Software Engineer, Delivery : Release",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8916232002",
+   "posted": "2026-11-06",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-airbnb-8312713",
+   "company": "airbnb",
+   "title": "Systems Engineer, Tech Foundations (Jira cloud)",
+   "location": "Remote - Bangalore, India",
+   "url": "https://careers.airbnb.com/positions/8312713?gh_jid=8312713",
+   "posted": "2026-11-13",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8324207",
+   "company": "stripe",
+   "title": "Processing Cost Analyst",
+   "location": "IN-Bengaluru",
+   "url": "https://stripe.com/jobs/search?gh_jid=8324207",
+   "posted": "2026-11-02",
+   "score": 34,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-okta-7727730",
+   "company": "okta",
+   "title": "Business Systems Analyst, ServiceNow",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/7727730?gh_jid=7727730",
+   "posted": "2026-11-13",
+   "score": 34,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "javascript"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -331,6 +807,23 @@
    "isNew": true
   },
   {
+   "id": "gh-stripe-7618977",
+   "company": "stripe",
+   "title": "Software Engineer, Core Technology",
+   "location": "Bangalore",
+   "url": "https://stripe.com/jobs/search?gh_jid=7618977",
+   "posted": "2026-10-29",
+   "score": 31,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "machine learning"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "gh-devrev-6166569004",
    "company": "devrev",
    "title": "Solution Engineer : Bangalore",
@@ -342,6 +835,23 @@
    "years": 0,
    "bangalore": true,
    "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8185012",
+   "company": "stripe",
+   "title": "Software Engineer, Payin",
+   "location": "Bengaluru",
+   "url": "https://stripe.com/jobs/search?gh_jid=8185012",
+   "posted": "2026-10-29",
+   "score": 29,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "backend"
+   ],
    "firstSeen": "2026-11-16",
    "isNew": true
   },
@@ -364,18 +874,102 @@
    "isNew": true
   },
   {
-   "id": "gh-observeai-5432596008",
-   "company": "observeai",
-   "title": "AI Agent Engineer",
-   "location": "Bengaluru ",
-   "url": "https://www.observe.ai/position?gh_jid=5432596008",
-   "posted": "2026-11-08",
+   "id": "gh-mongodb-8094118",
+   "company": "mongodb",
+   "title": "Real Estate Analyst",
+   "location": "Bengaluru; Gurugram",
+   "url": "https://www.mongodb.com/careers/job/?gh_jid=8094118",
+   "posted": "2026-11-12",
+   "score": 28,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "mongodb"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8189018",
+   "company": "stripe",
+   "title": "Third Party Risk Analyst",
+   "location": "Bengaluru",
+   "url": "https://stripe.com/jobs/search?gh_jid=8189018",
+   "posted": "2026-10-29",
+   "score": 27,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5261565007",
+   "company": "zscaler",
+   "title": "Information Security Engineer (Thick Client Testing /  Harness / VAPT)",
+   "location": "Bangalore, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5261565007",
+   "posted": "2026-10-29",
    "score": 27,
    "fresher": false,
    "years": 0,
    "bangalore": true,
    "skills": [
-    "llm"
+    "android",
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8247127",
+   "company": "stripe",
+   "title": "AR Analyst",
+   "location": "Bangalore",
+   "url": "https://stripe.com/jobs/search?gh_jid=8247127",
+   "posted": "2026-10-29",
+   "score": 25,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5263563007",
+   "company": "zscaler",
+   "title": "Escalation Engineer",
+   "location": "Bangalore, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5263563007",
+   "posted": "2026-11-06",
+   "score": 22,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5210010007",
+   "company": "zscaler",
+   "title": "Escalation Engineer - ZIA/ZPA",
+   "location": "Bangalore, IND; Mohali, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5210010007",
+   "posted": "2026-10-29",
+   "score": 22,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -392,6 +986,65 @@
    "years": 0,
    "bangalore": true,
    "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Snowflake-dd74b9e7-ebed-4d23-94d0-1fbb4d90b180",
+   "company": "Snowflake",
+   "title": "Solution Engineer - GCC (FSI)",
+   "location": "IN-Bangalore-MSO",
+   "url": "https://jobs.ashbyhq.com/snowflake/dd74b9e7-ebed-4d23-94d0-1fbb4d90b180",
+   "posted": "2026-10-29",
+   "score": 20,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-affirm-8017340003",
+   "company": "affirm",
+   "title": "Software Engineer I, Fullstack (Search)",
+   "location": "Remote US",
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8017340003",
+   "posted": "2026-10-30",
+   "score": 69,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "javascript",
+    "typescript",
+    "kotlin",
+    "fullstack",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-affirm-8181183003",
+   "company": "affirm",
+   "title": "Software Engineer I, Backend (Continuous Delivery)",
+   "location": "Remote US",
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8181183003",
+   "posted": "2026-11-12",
+   "score": 60,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "mysql",
+    "kotlin",
+    "aws",
+    "backend"
+   ],
    "firstSeen": "2026-11-16",
    "isNew": true
   },
@@ -440,45 +1093,39 @@
    "isNew": true
   },
   {
-   "id": "gh-devrev-5722574004",
-   "company": "devrev",
-   "title": "Software Engineer - Applied AI ",
-   "location": "Philippines Remote",
-   "url": "https://job-boards.greenhouse.io/devrev/jobs/5722574004",
-   "posted": "2026-09-25",
-   "score": 37,
-   "fresher": false,
+   "id": "gh-coinbase-7985187",
+   "company": "coinbase",
+   "title": "Machine Learning Engineer",
+   "location": "Remote - India",
+   "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187",
+   "posted": "2026-10-30",
+   "score": 40,
+   "fresher": true,
    "years": 0,
    "bangalore": false,
    "skills": [
     "python",
-    "javascript",
-    "typescript",
-    "sql",
-    "generative ai",
+    "machine learning",
     "llm"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
   },
   {
-   "id": "gh-slice-8300434",
-   "company": "slice",
-   "title": "Software Developer, DevEx (Stateful Systems)",
-   "location": "Remote - UK or North Macedonia",
-   "url": "https://slice.careers/careers-listing?gh_jid=8300434",
-   "posted": "2026-10-30",
+   "id": "ab-Snowflake-88a70f56-834d-44d4-add8-e36b739e5495",
+   "company": "Snowflake",
+   "title": "Incident Response Engineer",
+   "location": "US-CA-Bay Area-Remote",
+   "url": "https://jobs.ashbyhq.com/snowflake/88a70f56-834d-44d4-add8-e36b739e5495",
+   "posted": "2026-10-16",
    "score": 37,
    "fresher": true,
-   "years": 0,
+   "years": 2,
    "bangalore": false,
    "skills": [
     "python",
-    "sql",
-    "generative ai",
-    "aws",
-    "git",
-    "backend"
+    "llm",
+    "aws"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -506,6 +1153,25 @@
    "isNew": true
   },
   {
+   "id": "gh-coinbase-8165441",
+   "company": "coinbase",
+   "title": "Software Engineer, Security Platform",
+   "location": "Remote - India",
+   "url": "https://www.coinbase.com/careers/positions/8165441?gh_jid=8165441",
+   "posted": "2026-11-05",
+   "score": 35,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "generative ai",
+    "git",
+    "backend"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "gh-devrev-6196805004",
    "company": "devrev",
    "title": "Forward Deployed AI Strategist {Chennai}",
@@ -520,6 +1186,25 @@
     "generative ai",
     "ai engineer",
     "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-notion-79c18580-c927-456c-9d5f-72efbc6c43cb",
+   "company": "notion",
+   "title": "Forward Deployed Engineer, India",
+   "location": "Hyderabad, India",
+   "url": "https://jobs.ashbyhq.com/notion/79c18580-c927-456c-9d5f-72efbc6c43cb",
+   "posted": "2026-09-15",
+   "score": 32,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "backend"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -542,6 +1227,26 @@
    "isNew": true
   },
   {
+   "id": "ab-Snowflake-1af751fb-d53e-43b0-a3bc-6fcc4004cafb",
+   "company": "Snowflake",
+   "title": "Data Engineer",
+   "location": "IN-Pune",
+   "url": "https://jobs.ashbyhq.com/snowflake/1af751fb-d53e-43b0-a3bc-6fcc4004cafb",
+   "posted": "2026-10-28",
+   "score": 28,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "llm",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "gh-devrev-6139498004",
    "company": "devrev",
    "title": "Solution Engineer : Mumbai",
@@ -556,6 +1261,80 @@
     "python",
     "javascript",
     "typescript"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-yugabyte-4677134006",
+   "company": "yugabyte",
+   "title": "Technical Support Engineer APJ",
+   "location": "India",
+   "url": "https://job-boards.greenhouse.io/yugabyte/jobs/4677134006",
+   "posted": "2026-09-03",
+   "score": 27,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-8142302",
+   "company": "stripe",
+   "title": "Security Analyst ",
+   "location": "US Remote",
+   "url": "https://stripe.com/jobs/search?gh_jid=8142302",
+   "posted": "2026-11-12",
+   "score": 23,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-coinbase-8233945",
+   "company": "coinbase",
+   "title": "Enterprise Risk Management Analyst",
+   "location": "Remote - Luxembourg",
+   "url": "https://www.coinbase.com/careers/positions/8233945?gh_jid=8233945",
+   "posted": "2026-10-30",
+   "score": 23,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql",
+    "generative ai"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-twilio-8319442",
+   "company": "twilio",
+   "title": "Software Engineer (L1)",
+   "location": "Remote - India",
+   "url": "https://job-boards.greenhouse.io/twilio/jobs/8319442",
+   "posted": "2026-11-16",
+   "score": 22,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true
@@ -581,6 +1360,41 @@
    "isNew": true
   },
   {
+   "id": "ab-leap-e5eb1aaf-c9bd-4e18-8bb6-44b28c920364",
+   "company": "leap",
+   "title": "RCM Analyst",
+   "location": "Remote, US (excluding AK, CA, CO, NY, WA)",
+   "url": "https://jobs.ashbyhq.com/leap/e5eb1aaf-c9bd-4e18-8bb6-44b28c920364",
+   "posted": "2026-10-17",
+   "score": 21,
+   "fresher": true,
+   "years": 2,
+   "bangalore": false,
+   "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-vanta-0ccbb65f-f675-410a-ae54-1d34575f228a",
+   "company": "vanta",
+   "title": "Software Engineer, Integrations Platform, Vanta For Government (V4G)",
+   "location": "Remote U.S.",
+   "url": "https://jobs.ashbyhq.com/vanta/0ccbb65f-f675-410a-ae54-1d34575f228a",
+   "posted": "2026-08-26",
+   "score": 21,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "react",
+    "typescript",
+    "node",
+    "aws"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
    "id": "gh-devrev-5831999004",
    "company": "devrev",
    "title": "Solution Engineer : Delhi",
@@ -592,6 +1406,23 @@
    "years": 0,
    "bangalore": false,
    "skills": [],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "gh-twilio-8213730",
+   "company": "twilio",
+   "title": "Personalized Support Engineer",
+   "location": "Remote - India",
+   "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
+   "posted": "2026-11-13",
+   "score": 20,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "rest api"
+   ],
    "firstSeen": "2026-11-16",
    "isNew": true
   },
@@ -646,6 +1477,24 @@
     "python",
     "sql",
     "mongodb"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": true
+  },
+  {
+   "id": "ab-Snowflake-70b760c0-4daa-464b-8375-2d7512a583fe",
+   "company": "Snowflake",
+   "title": "Solution Engineer",
+   "location": "US-DE-Remote",
+   "url": "https://jobs.ashbyhq.com/snowflake/70b760c0-4daa-464b-8375-2d7512a583fe",
+   "posted": "2026-11-03",
+   "score": 15,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true

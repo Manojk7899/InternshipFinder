@@ -1,6 +1,23 @@
 {
-  "_comment": "Verified public job-board endpoints. Add more by running: node tools/find-board.mjs <company-name>",
-  "greenhouse": ["netradyne", "devrev", "hackerrank", "druva", "slice", "observeai", "groww", "porter"],
-  "lever": ["paytm", "meesho", "hevodata", "zeta", "porter", "mindtickle", "cred"],
-  "ashby": ["Sarvam", "Atlan", "Navi"]
+  "_comment": "Verified public job-board endpoints. Add more with: python tools/find_board.py <company-name>. Global companies are included because most hire in Bangalore; roles outside India are filtered out at scoring time.",
+
+  "greenhouse": [
+    "netradyne", "devrev", "hackerrank", "druva", "slice", "observeai", "groww",
+    "porter", "sigmoid", "glance", "inmobi", "entrupy", "affle", "clear",
+
+    "databricks", "stripe", "elastic", "mongodb", "datadog", "zscaler", "okta",
+    "brex", "coinbase", "gitlab", "affirm", "airbnb", "block", "robinhood",
+    "lyft", "epicgames", "figma", "twilio", "asana", "instacart", "mercury",
+    "chime", "neo4j", "turing", "dropbox", "yugabyte", "ramp", "remote"
+  ],
+
+  "lever": [
+    "paytm", "meesho", "hevodata", "zeta", "porter", "mindtickle", "cred",
+    "fampay", "toptal"
+  ],
+
+  "ashby": [
+    "Sarvam", "Atlan", "Navi", "bounce", "leap",
+    "Snowflake", "Ramp", "notion", "Plaid", "vanta", "Redis", "miro"
+  ]
 }

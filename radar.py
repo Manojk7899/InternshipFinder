@@ -32,7 +32,33 @@ SENIOR_RE = re.compile(
     re.I,
 )
 LEVEL_RE = re.compile(
-    r"(?:sde|sse|swe|lvl|level|grade|band)[ _-]*[2-9]|\bl[ _-]?[2-9]\b", re.I
+    r"(?:sde|sse|swe|lvl|level|grade|band)[ _-]*[2-9]"
+    r"|\bl[ _-]?[2-9]\b"
+    # "Security Engineer 2", "Data Scientist - 3", "Developer II" etc.
+    r"|\b(?:engineer|developer|analyst|scientist|programmer|architect)\s*[-_]?\s*[2-9]\b",
+    re.I,
+)
+
+INDIA_RE = re.compile(
+    r"\b(india|bangalore|bengaluru|hyderabad|pune|chennai|mumbai|delhi|gurgaon|"
+    r"gurugram|noida|kolkata|ahmedabad|jaipur|kochi|coimbatore|indore|"
+    r"thiruvananthapuram|trivandrum|bhubaneswar|chandigarh|nagpur|mysore|mysuru)\b",
+    re.I,
+)
+
+# Roles tied to a country other than India are no use from Bangalore. A posting that
+# says "Remote" with no country attached is still worth surfacing.
+NON_INDIA_RE = re.compile(
+    r"\b(usa|u\.s\.|united states|america|canada|toronto|vancouver|mexico|brazil|"
+    r"argentina|colombia|latam|poland|warsaw|germany|berlin|munich|france|paris|"
+    r"spain|madrid|portugal|lisbon|netherlands|amsterdam|ireland|dublin|uk|"
+    r"united kingdom|london|sweden|norway|denmark|switzerland|zurich|israel|"
+    r"tel aviv|australia|sydney|melbourne|new zealand|singapore|japan|tokyo|korea|"
+    r"china|shanghai|beijing|hong kong|taiwan|vietnam|thailand|philippines|manila|"
+    r"indonesia|jakarta|malaysia|dubai|uae|emea|nyc|new york|san francisco|seattle|"
+    r"austin|boston|chicago|denver|atlanta|los angeles|portland|dallas|miami|"
+    r"washington|california|texas|florida|ontario|quebec)\b",
+    re.I,
 )
 JUNIOR_OK_RE = re.compile(
     r"\b(sde\s*-?\s*(1|i)|software engineer\s*-?\s*(1|i)|engineer\s*-?\s*(1|i))\b", re.I
@@ -185,14 +211,16 @@ def score(job, cfg):
         fresher = True
 
     loc = ((job.get("title") or "") + " " + loc_raw).lower()
-    in_india = False
     for k, v in cfg["locationBoost"].items():
         if k in loc:
             s += v
-            if k != "remote":
-                in_india = True
-    if not in_india and "remote" not in loc:
-        return None
+
+    # Word-boundary match, so "Indiana" is not mistaken for India.
+    in_india = bool(INDIA_RE.search(loc))
+    if not in_india:
+        # Keep only a bare "Remote" with no other country attached.
+        if "remote" not in loc or NON_INDIA_RE.search(loc):
+            return None
 
     out = dict((k, v) for k, v in job.items() if k != "text")
     out.update({
