@@ -20,6 +20,9 @@ No API keys. No login. No account to connect. No laptop has to stay on.
 - **[The Volume Track playbook](docs/playbook.html)** — the manual half of the search: the
   service-company drives and portal alerts this radar cannot see. Served at
   `https://nrnravi.github.io/JobFinder/playbook.html` when Pages is enabled.
+- **[prefill/](prefill/)** — a Chrome extension that fills the routine fields on an
+  application form (name, email, links, notice period) and leaves you to answer the real
+  questions and submit. Takes an application from ~20 minutes to ~3.
 
 ---
 
@@ -124,9 +127,13 @@ streamlit run streamlit_app.py   # view the dashboard locally
 
 ## What this deliberately does not do
 
-It does not auto-apply. Mass auto-applying gets LinkedIn accounts restricted, and
-tailored applications plus referrals convert far better than volume. The radar finds
-and ranks the jobs; applying, tailoring and following up stay human.
+It does not auto-apply. All three job-board providers gate submission behind reCAPTCHA,
+and two sit behind Cloudflare Bot Management — automating past that risks the account and
+can get the IP blocked from applying by hand. It also would not help: the questions that
+decide a fresher application are the ones a bot answers badly.
+
+The radar finds and ranks the jobs, and [prefill/](prefill/) removes the typing. Applying,
+tailoring and following up stay human.
 
 It also only sees companies with public job boards — mostly product companies and
 startups. Service companies (TCS, Infosys, Wipro, Accenture) run separate off-campus

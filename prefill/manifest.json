@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Job Application Prefill",
+  "version": "1.0.0",
+  "description": "Fills the routine fields on a job application form. Never submits anything.",
+
+  "permissions": ["storage", "activeTab", "scripting"],
+
+  "background": { "service_worker": "background.js" },
+
+  "options_page": "options.html",
+
+  "action": { "default_title": "Prefill this application form" }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prefill matcher test forms</title>
+<style>
+  body{font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px;background:#f6f7f9;color:#15181d}
+  h2{margin:28px 0 8px;font-size:17px}
+  fieldset{border:1px solid #d8dde4;border-radius:8px;background:#fff;padding:14px 16px;margin:0 0 18px;max-width:560px}
+  legend{font-weight:600;font-size:13px;color:#55606d;padding:0 6px}
+  label,.lbl{display:block;font-size:13px;color:#3a434f;margin:10px 0 3px}
+  input,textarea,select{width:100%;padding:7px 9px;border:1px solid #cfd6de;border-radius:6px;font:inherit;background:#fff;color:inherit}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<h1 style="font-size:19px">Prefill matcher test forms</h1>
+<p style="max-width:60ch;color:#55606d">
+  Three shapes copied from the real providers: Lever's server-rendered names, a
+  Greenhouse-style split-name form, and Ashby's React pattern where labels are sibling
+  divs and the inputs carry no name attributes at all.
+</p>
+
+<!-- 1. LEVER: real field names observed on jobs.lever.co -->
+<h2>1. Lever shape</h2>
+<form id="lever">
+  <fieldset>
+    <legend>jobs.lever.co</legend>
+    <label for="lv-name">Full name<input id="lv-name" name="name" type="text"></label>
+    <label for="lv-email">Email<input id="lv-email" name="email" type="email"></label>
+    <label for="lv-phone">Phone<input id="lv-phone" name="phone" type="text"></label>
+    <label for="lv-loc">Current location<input id="lv-loc" name="location" type="text"></label>
+    <label for="lv-org">Current company<input id="lv-org" name="org" type="text"></label>
+    <label for="lv-li">LinkedIn URL<input id="lv-li" name="urls[LinkedIn]" type="text"></label>
+    <label for="lv-q1">Why do you want to work here?<textarea id="lv-q1" name="cards[abc][field0]"></textarea></label>
+    <!-- must never be touched -->
+    <input type="hidden" name="h-captcha-response" id="hcaptchaResponseInput">
+    <input type="hidden" name="csrf_token" value="x">
+    <input type="file" name="resume" id="resume-upload-input">
+  </fieldset>
+</form>
+
+<!-- 2. GREENHOUSE: split first/last, aria-label driven -->
+<h2>2. Greenhouse shape</h2>
+<form id="greenhouse">
+  <fieldset>
+    <legend>job-boards.greenhouse.io</legend>
+    <label for="gh-fn">First Name<input id="gh-fn" name="first_name" type="text"></label>
+    <label for="gh-ln">Last Name<input id="gh-ln" name="last_name" type="text"></label>
+    <label for="gh-em">Email<input id="gh-em" name="email" type="email"></label>
+    <label for="gh-ph">Phone<input id="gh-ph" name="phone" type="tel"></label>
+    <label for="gh-gh">GitHub URL<input id="gh-gh" name="job_application[answers][2][text_value]" type="text"></label>
+    <label for="gh-web">Website<input id="gh-web" name="job_application[answers][3][text_value]" type="text"></label>
+    <label for="gh-nt">Notice period<input id="gh-nt" name="job_application[answers][4][text_value]" type="text"></label>
+    <label for="gh-yr">Year of graduation<input id="gh-yr" name="job_application[answers][5][text_value]" type="text"></label>
+    <label for="gh-loc">Location
+      <select id="gh-loc" name="job_application[answers][6][select]">
+        <option value="">Select…</option>
+        <option value="bangalore">Bangalore, India</option>
+        <option value="delhi">Delhi, India</option>
+      </select>
+    </label>
+  </fieldset>
+</form>
+
+<!-- 3. ASHBY: no name attributes, label is a sibling div -->
+<h2>3. Ashby shape (React, no name attributes)</h2>
+<form id="ashby">
+  <fieldset>
+    <legend>jobs.ashbyhq.com</legend>
+    <div><div class="lbl">Name</div><input type="text"></div>
+    <div><div class="lbl">Email</div><input type="email"></div>
+    <div><div class="lbl">Mobile number</div><input type="text"></div>
+    <div><div class="lbl">LinkedIn</div><input type="text"></div>
+    <div><div class="lbl">GitHub</div><input type="text"></div>
+    <div><div class="lbl">College / University</div><input type="text"></div>
+    <div><div class="lbl">Expected CTC</div><input type="text"></div>
+    <div><div class="lbl">Tell us about a project you are proud of</div><textarea></textarea></div>
+    <div class="hidden"><div class="lbl">Email</div><input type="text" id="should-not-fill"></div>
+  </fieldset>
+</form>
+
+<script src="../matcher.js"></script>
+</body>
+</html>

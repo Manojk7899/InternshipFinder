@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prefill profile</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#15181d;--muted:#5c6673;--line:#d8dde4;--accent:#1a4fd6;--ok:#0f7a4d}
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0f1319;--card:#171c24;--ink:#e7ecf3;--muted:#98a3b2;--line:#2a323d;--accent:#7ba4ff;--ok:#4ddb96;color-scheme:dark}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,sans-serif;padding:28px 16px 60px}
+  .wrap{max-width:620px;margin:0 auto}
+  h1{font-size:21px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:62ch}
+  fieldset{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:14px 16px;margin:0 0 16px}
+  legend{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;padding:0 6px}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 3px}
+  input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:7px;font:inherit;background:var(--bg);color:var(--ink)}
+  input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+  @media (max-width:520px){.row{grid-template-columns:1fr}}
+  .actions{display:flex;gap:12px;align-items:center;margin-top:18px}
+  button{font:inherit;font-weight:600;padding:9px 18px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+  #status{color:var(--ok);font-size:13.5px;font-weight:600}
+  .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:11px 14px;font-size:13.5px;color:var(--muted);margin:0 0 20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Prefill profile</h1>
+  <p class="sub">
+    Filled into application forms when you click the extension button. Leave anything blank
+    that you would rather type each time.
+  </p>
+
+  <p class="note">
+    Stored only in this browser, on this computer, using the extension's local storage.
+    It is never uploaded anywhere, and nothing here is sent to the job site until
+    <em>you</em> submit the form yourself.
+  </p>
+
+  <form id="f">
+    <fieldset>
+      <legend>Identity</legend>
+      <div class="row">
+        <div><label for="firstName">First name</label><input id="firstName"></div>
+        <div><label for="lastName">Last name</label><input id="lastName"></div>
+      </div>
+      <label for="fullName">Full name (forms that ask for one field)</label><input id="fullName">
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" type="email"></div>
+        <div><label for="phone">Phone</label><input id="phone"></div>
+      </div>
+      <label for="location">Current location</label><input id="location" placeholder="Bangalore, India">
+    </fieldset>
+
+    <fieldset>
+      <legend>Links</legend>
+      <label for="linkedin">LinkedIn</label><input id="linkedin" placeholder="https://linkedin.com/in/…">
+      <label for="github">GitHub</label><input id="github" placeholder="https://github.com/…">
+      <label for="portfolio">Portfolio / website</label><input id="portfolio">
+    </fieldset>
+
+    <fieldset>
+      <legend>Education and availability</legend>
+      <div class="row">
+        <div><label for="college">College / university</label><input id="college"></div>
+        <div><label for="degree">Degree</label><input id="degree" placeholder="B.E. Computer Science"></div>
+      </div>
+      <div class="row">
+        <div><label for="gradYear">Graduation year</label><input id="gradYear" placeholder="2026"></div>
+        <div><label for="noticePeriod">Notice period</label><input id="noticePeriod" placeholder="Immediate"></div>
+      </div>
+      <div class="row">
+        <div><label for="experience">Years of experience</label><input id="experience" placeholder="0"></div>
+        <div><label for="company">Current company</label><input id="company" placeholder="None"></div>
+      </div>
+      <div class="row">
+        <div><label for="currentCtc">Current CTC</label><input id="currentCtc" placeholder="Not applicable"></div>
+        <div><label for="expectedCtc">Expected CTC</label><input id="expectedCtc" placeholder="As per company standards"></div>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="submit">Save profile</button>
+      <span id="status" role="status"></span>
+    </div>
+  </form>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>
