@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16T09:13:55.228Z",
- "count": 35,
+ "updated": "2026-11-16T09:25:17.328353+00:00",
+ "count": 34,
  "jobs": [
   {
    "id": "lv-hevodata-6cbbe304-e065-4711-bf3e-756795d2bc2a",
@@ -9,7 +9,7 @@
    "location": "Bangalore, India",
    "url": "https://jobs.lever.co/hevodata/6cbbe304-e065-4711-bf3e-756795d2bc2a",
    "posted": "2026-07-27",
-   "score": 91,
+   "score": 90,
    "fresher": true,
    "years": 0,
    "bangalore": true,
@@ -28,7 +28,7 @@
    "location": "Bangalore, India",
    "url": "https://jobs.lever.co/hevodata/993a3ed3-3014-432f-b0f4-28d300d58d9a",
    "posted": "2026-09-21",
-   "score": 76,
+   "score": 75,
    "fresher": true,
    "years": 0,
    "bangalore": true,
@@ -218,25 +218,6 @@
     "python",
     "aws",
     "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-hackerrank-6993983",
-   "company": "hackerrank",
-   "title": "Customer Experience Engineer, L2",
-   "location": "Hybrid in Bangalore, India",
-   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/6993983",
-   "posted": "2026-10-10",
-   "score": 43,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "rest api",
-    "sql"
    ],
    "firstSeen": "2026-11-16",
    "isNew": true

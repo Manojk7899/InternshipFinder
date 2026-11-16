@@ -1,84 +1,109 @@
 # Job Radar
 
-A free, no-login job tracker for fresher software / AI roles in Bangalore.
+A free job tracker for fresher software / AI roles in Bangalore.
 
-It runs every morning on GitHub Actions, pulls openings straight from companies'
-own public job boards (Greenhouse, Lever, Ashby), filters out anything senior or
-non-engineering, scores what's left against a fresher AI/full-stack profile, and
-publishes the results as a web page.
+Every morning it pulls openings straight from companies' own public job boards
+(Greenhouse, Lever, Ashby), filters out anything senior or non-engineering, scores
+what's left against a fresher AI / full-stack profile, and shows the results in a
+dashboard with an application tracker.
 
-Nothing to install. No API keys. No account to connect. No laptop has to be on.
-
-**Dashboard:** `https://<your-username>.github.io/job-radar/`
+No API keys. No login. No account to connect. No laptop has to stay on.
 
 ---
 
-## One-time setup (about 5 minutes)
+## The two pieces
 
-1. Create a **public** repo named `job-radar` on GitHub and push this folder to it.
-2. Go to **Settings → Pages**. Under "Build and deployment", set
-   **Source: Deploy from a branch**, **Branch: `main`**, **Folder: `/docs`**. Save.
-3. Go to **Settings → Actions → General**. Under "Workflow permissions", select
-   **Read and write permissions**. Save. (This lets the daily run commit its results.)
-4. Go to the **Actions** tab, pick **Job Radar**, and click **Run workflow** to do the
-   first run now instead of waiting for tomorrow morning.
+| | What it is | Where it runs |
+|---|---|---|
+| **The scan** | `radar.py` — fetches, filters, scores, writes `docs/jobs.json` | GitHub Actions, 07:00 IST daily, free |
+| **The dashboard** | `streamlit_app.py` — browse, filter, track applications | Streamlit Community Cloud, free |
 
-After a minute or two the dashboard URL above will be live. Bookmark it on your phone.
-
-> The repo must be public for GitHub Pages to work on a free account — which is why
-> **no resume, phone number or email is stored in here.** Keep it that way.
+There is also a zero-dependency static page at `docs/index.html` (GitHub Pages) as an
+always-on fallback — Streamlit apps sleep when idle and take a few seconds to wake.
 
 ---
 
-## What it does each morning
+## Setup
 
-Runs at **07:00 IST**, and for each company board:
+### 1. GitHub Actions (the daily scan)
 
-- pulls every open posting
-- drops anything senior, staff, principal, lead, manager, SDE 2+, or demanding 3+ years
-- drops non-engineering roles (sales, HR, content, product management, …)
-- drops anything outside India that isn't remote
-- scores the rest on skill overlap, fresher signals and Bangalore location
-- marks anything it has never seen before as **NEW**
+1. **Settings → Actions → General → Workflow permissions** → select
+   **Read and write permissions** → Save.
+   *Without this the daily run cannot commit its results.*
+2. **Actions** tab → **Job Radar** → **Run workflow** to do the first scan now
+   instead of waiting until tomorrow morning.
 
-Then it commits `docs/jobs.json` and the page updates itself.
+### 2. Streamlit Community Cloud (the dashboard)
+
+1. Go to **share.streamlit.io** and sign in with GitHub.
+2. **Create app → Deploy a public app from GitHub**:
+   - Repository: `nrnravi/JobFinder`
+   - Branch: `main`
+   - Main file path: `streamlit_app.py`
+3. Deploy. You get a permanent URL — bookmark it on your phone.
+
+It redeploys automatically whenever the daily scan commits new jobs.
+
+### 3. GitHub Pages (optional fallback)
+
+**Settings → Pages** → Source: **Deploy from a branch**, Branch: `main`,
+Folder: **`/docs`**. Gives you `https://nrnravi.github.io/JobFinder/`.
+
+> The repo is public, so **no resume, phone number or email is stored in it.**
+> Keep it that way.
 
 ---
 
 ## Using it
 
-Open the dashboard and work the **New today** filter first — those are roles posted
-since yesterday, where being early genuinely matters. Then **Bangalore**, then
-**Fresher-friendly**.
+Work the **New today** filter first — those are roles posted since yesterday, where
+applying early genuinely matters. Then Bangalore, then Fresher-friendly.
 
-The number on the right of each row is the match score. It is a sorting aid, not a
-verdict: a 30 you're excited about beats a 70 you aren't.
+Set a **status** on any role and it moves to the **My applications** tab. Follow up on
+anything sitting at *Applied* for more than 5 days: a short note to a recruiter or an
+engineer at that company is where most extra interviews come from.
+
+The score is a sorting aid, not a verdict. A 30 you're excited about beats a 70 you aren't.
+
+---
+
+## What each run does
+
+- pulls every open posting from the boards in `companies.json`
+- drops senior / staff / principal / lead / manager / SDE 2+ / L2+ roles
+- drops anything demanding 3+ years
+- drops non-engineering roles (sales, HR, content, product management, …)
+- drops anything outside India that isn't remote
+- scores the rest on skill overlap, fresher signals and Bangalore location
+- marks anything never seen before as **NEW**
 
 ---
 
 ## Tuning it
 
-**Add more companies.** Find a company's board token first:
+**Add more companies** — the single biggest improvement available. Find a company's
+board token:
 
 ```
-node tools/find-board.mjs razorpay swiggy zomato flipkart
+python tools/find_board.py razorpay swiggy zomato flipkart
 ```
 
-Anything it reports as found, paste into `companies.json` under the right section.
-Commit, and the next run picks it up. More companies is the single biggest
-improvement you can make — 20 boards is a start, 100 is a real radar.
+Paste whatever it finds into `companies.json`, commit, and the next scan picks it up.
+18 boards is a start; 100 is a real radar. Not every company has a public board —
+Flipkart and Zomato don't, so those still need checking by hand.
 
-**Change what counts as a match.** Edit `scoring.json`:
+**Change what counts as a match** — edit `scoring.json`:
 
 - `skills` — points per matching technology. Add what you learn.
-- `fresherSignals` — phrases that mean "open to freshers". Worth double in a job title.
+- `fresherSignals` — phrases meaning "open to freshers"; worth double in a job title.
 - `disqualify` / `seniorityPenalty` — what to reject or push down.
-- `minScore` — raise it if there's too much noise, lower it to see more.
+- `minScore` — raise it for less noise, lower it to see more.
 
-**Run it locally** to test a change before committing:
+**Test a change before committing:**
 
 ```
-node radar.mjs
+python radar.py                  # run a scan locally
+streamlit run streamlit_app.py   # view the dashboard locally
 ```
 
 ---
@@ -87,4 +112,8 @@ node radar.mjs
 
 It does not auto-apply. Mass auto-applying gets LinkedIn accounts restricted, and
 tailored applications plus referrals convert far better than volume. The radar finds
-and ranks the jobs; the applying, tailoring and follow-up stay human.
+and ranks the jobs; applying, tailoring and following up stay human.
+
+It also only sees companies with public job boards — mostly product companies and
+startups. Service companies (TCS, Infosys, Wipro, Accenture) run separate off-campus
+drives that need Naukri and Unstop alerts set up by hand.

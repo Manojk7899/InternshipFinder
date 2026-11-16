@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: '20'
+          python-version: '3.12'
 
       - name: Scan job boards
-        run: node radar.mjs
+        run: python radar.py
 
       - name: Commit results
         run: |

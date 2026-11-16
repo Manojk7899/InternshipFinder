@@ -1,1 +1,4 @@
+tracker.csv
+__pycache__/
+.venv/
 node_modules/
