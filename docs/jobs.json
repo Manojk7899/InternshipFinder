@@ -1,7 +1,62 @@
 {
- "updated": "2026-11-16T09:47:28.034900+00:00",
- "count": 81,
+ "updated": "2026-11-17T09:40:21.529588+00:00",
+ "count": 70,
  "jobs": [
+  {
+   "id": "gh-okta-8377182",
+   "company": "okta",
+   "title": "Demo Engineering Developer",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/8377182?gh_jid=8377182",
+   "posted": "2026-11-16",
+   "score": 47,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "react",
+    "node",
+    "aws"
+   ],
+   "firstSeen": "2026-11-17",
+   "isNew": true
+  },
+  {
+   "id": "ab-Snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6",
+   "company": "Snowflake",
+   "title": "Forward Deployed Engineer, Frontier Engineering",
+   "location": "IN-Bangalore-MSO",
+   "url": "https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6",
+   "posted": "2026-11-17",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "llm"
+   ],
+   "firstSeen": "2026-11-17",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5123489007",
+   "company": "zscaler",
+   "title": "Escalation Engineer - ZIA/ZPA",
+   "location": "Bangalore, IND; Mohali, IND; Pune, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5123489007",
+   "posted": "2026-11-17",
+   "score": 26,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
+   "firstSeen": "2026-11-17",
+   "isNew": true
+  },
   {
    "id": "lv-hevodata-6cbbe304-e065-4711-bf3e-756795d2bc2a",
    "company": "hevodata",
@@ -19,7 +74,7 @@
     "rest api"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-entrupy-4796804007",
@@ -41,7 +96,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-hevodata-993a3ed3-3014-432f-b0f4-28d300d58d9a",
@@ -60,7 +115,7 @@
     "rest api"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-netradyne-4729961005",
@@ -82,7 +137,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-fampay-bbbbbfd2-1855-4991-82d5-84ef57607c24",
@@ -103,7 +158,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-hevodata-95ab9f01-3671-4073-9990-4418aecb24e7",
@@ -125,7 +180,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-cred-9a746e68-0858-4190-9144-54b19a2cbf2c",
@@ -145,7 +200,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-okta-8195169",
@@ -153,7 +208,7 @@
    "title": "Workday Extend Developer ",
    "location": "Bengaluru, India",
    "url": "https://www.okta.com/company/careers/opportunity/8195169?gh_jid=8195169",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 57,
    "fresher": true,
    "years": 0,
@@ -166,28 +221,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "ab-Sarvam-f09b6a35-e2d1-4833-8bc5-2b495991d882",
-   "company": "Sarvam",
-   "title": "Infrastructure Engineer",
-   "location": "Bengaluru",
-   "url": "https://jobs.ashbyhq.com/sarvam/f09b6a35-e2d1-4833-8bc5-2b495991d882",
-   "posted": "2026-10-26",
-   "score": 57,
-   "fresher": true,
-   "years": 2,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "llm",
-    "aws",
-    "git",
-    "backend"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-hackerrank-8281055",
@@ -206,7 +240,7 @@
     "deep learning"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-hevodata-ee02ca24-94ec-415b-ab36-7dec4d62099b",
@@ -225,7 +259,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-hackerrank-8273522",
@@ -245,7 +279,7 @@
     "deep learning"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-hackerrank-8127535",
@@ -265,7 +299,7 @@
     "sql"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-cred-b3da0ae4-d0a8-45ce-a1e5-73be12b4bfe3",
@@ -284,41 +318,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-turing-6252155004",
-   "company": "turing",
-   "title": "Growth Analyst (Paid Acquisition)",
-   "location": "Bengaluru, Karnataka, India",
-   "url": "https://job-boards.greenhouse.io/turing/jobs/6252155004",
-   "posted": "2026-11-07",
-   "score": 50,
-   "fresher": true,
-   "years": 2,
-   "bangalore": true,
-   "skills": [],
-   "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-gitlab-8924923002",
-   "company": "gitlab",
-   "title": "Intermediate Data Engineer",
-   "location": "Bangalore, India",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8924923002",
-   "posted": "2026-11-06",
-   "score": 46,
-   "fresher": true,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "sql",
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-elastic-8314336",
@@ -336,25 +336,7 @@
     "ai engineer"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-elastic-8247206",
-   "company": "elastic",
-   "title": "Agentic AI Engineer",
-   "location": "Bangalore, India",
-   "url": "https://jobs.elastic.co/jobs?gh_jid=8247206&gh_jid=8247206",
-   "posted": "2026-11-11",
-   "score": 44,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "llm",
-    "ai engineer"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-sigmoid-8829803002",
@@ -373,7 +355,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-mongodb-8143980",
@@ -381,7 +363,7 @@
    "title": "Application Engineer",
    "location": "Bengaluru",
    "url": "https://www.mongodb.com/careers/job/?gh_jid=8143980",
-   "posted": "2026-11-12",
+   "posted": "2026-11-16",
    "score": 42,
    "fresher": false,
    "years": 0,
@@ -394,26 +376,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-databricks-8829029002",
-   "company": "databricks",
-   "title": "Software Engineer, Infrastructure",
-   "location": "Bengaluru, India",
-   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8829029002",
-   "posted": "2026-11-13",
-   "score": 41,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "aws",
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-mongodb-8007613",
@@ -421,7 +384,7 @@
    "title": "Technical Services Engineer",
    "location": "Bengaluru",
    "url": "https://www.mongodb.com/careers/job/?gh_jid=8007613",
-   "posted": "2026-11-12",
+   "posted": "2026-11-16",
    "score": 41,
    "fresher": true,
    "years": 0,
@@ -433,7 +396,7 @@
     "mongodb"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-zscaler-5261002007",
@@ -451,7 +414,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-hackerrank-8229735",
@@ -466,7 +429,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-8031833",
@@ -481,26 +444,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-gitlab-8905402002",
-   "company": "gitlab",
-   "title": "Intermediate Backend Engineer, Authorization",
-   "location": "Bangalore, India",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8905402002",
-   "posted": "2026-11-06",
-   "score": 40,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "rest api",
-    "git",
-    "backend"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-gitlab-8775507002",
@@ -519,7 +463,7 @@
     "frontend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-gitlab-8864819002",
@@ -537,7 +481,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-okta-7770733",
@@ -545,7 +489,7 @@
    "title": "Developer Support Engineer",
    "location": "Bengaluru, India",
    "url": "https://www.okta.com/company/careers/opportunity/7770733?gh_jid=7770733",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 38,
    "fresher": true,
    "years": 0,
@@ -554,7 +498,7 @@
     "node"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-okta-6839581",
@@ -562,7 +506,7 @@
    "title": "Solution Engineer",
    "location": "Bengaluru, India",
    "url": "https://www.okta.com/company/careers/opportunity/6839581?gh_jid=6839581",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 38,
    "fresher": false,
    "years": 0,
@@ -572,7 +516,7 @@
     "frontend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-gitlab-8867756002",
@@ -591,7 +535,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-7543868",
@@ -608,7 +552,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-hackerrank-7461142",
@@ -625,7 +569,7 @@
     "python"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-okta-7626222",
@@ -633,7 +577,7 @@
    "title": "AP & Expenses Projects Analyst",
    "location": "Bengaluru, India",
    "url": "https://www.okta.com/company/careers/opportunity/7626222?gh_jid=7626222",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 36,
    "fresher": false,
    "years": 0,
@@ -642,7 +586,7 @@
     "python"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-gitlab-8890971002",
@@ -660,7 +604,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-gitlab-8916232002",
@@ -678,7 +622,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-airbnb-8312713",
@@ -693,7 +637,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-8324207",
@@ -711,7 +655,7 @@
     "sql"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-okta-7727730",
@@ -719,7 +663,7 @@
    "title": "Business Systems Analyst, ServiceNow",
    "location": "Bengaluru, India",
    "url": "https://www.okta.com/company/careers/opportunity/7727730?gh_jid=7727730",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 34,
    "fresher": false,
    "years": 0,
@@ -728,7 +672,7 @@
     "javascript"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Sarvam-fcb15601-6440-41f7-aa79-b9992057a4b2",
@@ -746,27 +690,7 @@
     "node"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "ab-Sarvam-d2d593e6-be5a-4431-b1fa-86f18d1c7edf",
-   "company": "Sarvam",
-   "title": "DevOps Engineer",
-   "location": "Bengaluru",
-   "url": "https://jobs.ashbyhq.com/sarvam/d2d593e6-be5a-4431-b1fa-86f18d1c7edf",
-   "posted": "2026-08-28",
-   "score": 34,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "node",
-    "aws",
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Sarvam-0371342b-5cb8-487b-9310-4d0eb5b37f47",
@@ -785,7 +709,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Sarvam-db89b576-2456-4cc4-ab0b-c45f8c6c27f0",
@@ -804,7 +728,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-7618977",
@@ -821,7 +745,7 @@
     "machine learning"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-devrev-6166569004",
@@ -836,7 +760,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-8185012",
@@ -853,7 +777,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-cred-913a6616-78c9-4ca3-8c92-67ddea8a80df",
@@ -871,7 +795,7 @@
     "sql"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-mongodb-8094118",
@@ -879,7 +803,7 @@
    "title": "Real Estate Analyst",
    "location": "Bengaluru; Gurugram",
    "url": "https://www.mongodb.com/careers/job/?gh_jid=8094118",
-   "posted": "2026-11-12",
+   "posted": "2026-11-16",
    "score": 28,
    "fresher": true,
    "years": 0,
@@ -888,7 +812,7 @@
     "mongodb"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-8189018",
@@ -905,7 +829,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-zscaler-5261565007",
@@ -923,7 +847,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-stripe-8247127",
@@ -938,7 +862,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-zscaler-5263563007",
@@ -955,24 +879,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-zscaler-5210010007",
-   "company": "zscaler",
-   "title": "Escalation Engineer - ZIA/ZPA",
-   "location": "Bangalore, IND; Mohali, IND",
-   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5210010007",
-   "posted": "2026-10-29",
-   "score": 22,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Sarvam-36f89b00-2010-4d23-aae3-17a2f53d9eaa",
@@ -987,7 +894,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Snowflake-dd74b9e7-ebed-4d23-94d0-1fbb4d90b180",
@@ -1002,7 +909,7 @@
    "bangalore": true,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-affirm-8017340003",
@@ -1024,7 +931,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-affirm-8181183003",
@@ -1046,51 +953,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-devrev-6196802004",
-   "company": "devrev",
-   "title": "Forward Deployed Engineer {Chennai}",
-   "location": "Chennai, India",
-   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196802004",
-   "posted": "2026-11-05",
-   "score": 45,
-   "fresher": false,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "python",
-    "javascript",
-    "typescript",
-    "sql",
-    "generative ai",
-    "llm"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-devrev-6196801004",
-   "company": "devrev",
-   "title": "Forward Deployed Engineer  {Mumbai}",
-   "location": "Mumbai, India",
-   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196801004",
-   "posted": "2026-11-05",
-   "score": 45,
-   "fresher": false,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "python",
-    "javascript",
-    "typescript",
-    "sql",
-    "generative ai",
-    "llm"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-coinbase-7985187",
@@ -1109,7 +972,7 @@
     "llm"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Snowflake-88a70f56-834d-44d4-add8-e36b739e5495",
@@ -1128,29 +991,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-devrev-6180279004",
-   "company": "devrev",
-   "title": "Forward Deployed Engineer",
-   "location": "Delhi, NCR",
-   "url": "https://job-boards.greenhouse.io/devrev/jobs/6180279004",
-   "posted": "2026-11-05",
-   "score": 35,
-   "fresher": false,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "python",
-    "javascript",
-    "typescript",
-    "sql",
-    "generative ai",
-    "llm"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-coinbase-8165441",
@@ -1169,26 +1010,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-devrev-6196805004",
-   "company": "devrev",
-   "title": "Forward Deployed AI Strategist {Chennai}",
-   "location": "Chennai, India",
-   "url": "https://job-boards.greenhouse.io/devrev/jobs/6196805004",
-   "posted": "2026-09-25",
-   "score": 32,
-   "fresher": false,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "generative ai",
-    "ai engineer",
-    "aws"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-notion-79c18580-c927-456c-9d5f-72efbc6c43cb",
@@ -1207,7 +1029,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-mindtickle-68626a39-ae90-4870-b3c7-04bf489f66f7",
@@ -1224,7 +1046,7 @@
     "backend"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Snowflake-1af751fb-d53e-43b0-a3bc-6fcc4004cafb",
@@ -1244,7 +1066,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-devrev-6139498004",
@@ -1263,7 +1085,7 @@
     "typescript"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-yugabyte-4677134006",
@@ -1282,26 +1104,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-stripe-8142302",
-   "company": "stripe",
-   "title": "Security Analyst ",
-   "location": "US Remote",
-   "url": "https://stripe.com/jobs/search?gh_jid=8142302",
-   "posted": "2026-11-12",
-   "score": 23,
-   "fresher": true,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "python",
-    "sql",
-    "aws"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-coinbase-8233945",
@@ -1320,24 +1123,7 @@
     "generative ai"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
-  },
-  {
-   "id": "gh-twilio-8319442",
-   "company": "twilio",
-   "title": "Software Engineer (L1)",
-   "location": "Remote - India",
-   "url": "https://job-boards.greenhouse.io/twilio/jobs/8319442",
-   "posted": "2026-11-16",
-   "score": 22,
-   "fresher": false,
-   "years": 0,
-   "bangalore": false,
-   "skills": [
-    "python"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-paytm-ad781ae8-cd4a-44c1-a74b-2822118b7c3d",
@@ -1357,7 +1143,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-leap-e5eb1aaf-c9bd-4e18-8bb6-44b28c920364",
@@ -1372,7 +1158,7 @@
    "bangalore": false,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-vanta-0ccbb65f-f675-410a-ae54-1d34575f228a",
@@ -1392,7 +1178,7 @@
     "aws"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-devrev-5831999004",
@@ -1407,7 +1193,7 @@
    "bangalore": false,
    "skills": [],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "gh-twilio-8213730",
@@ -1415,7 +1201,7 @@
    "title": "Personalized Support Engineer",
    "location": "Remote - India",
    "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
-   "posted": "2026-11-13",
+   "posted": "2026-11-16",
    "score": 20,
    "fresher": false,
    "years": 0,
@@ -1424,7 +1210,7 @@
     "rest api"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-mindtickle-3ce036e8-d4f9-4086-bec4-186676ea109e",
@@ -1442,7 +1228,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "lv-mindtickle-d62b36db-b088-48c7-a606-4ed458e30208",
@@ -1460,7 +1246,7 @@
     "git"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Sarvam-b2201b5e-1e96-497a-962c-bca1768f75fd",
@@ -1479,7 +1265,7 @@
     "mongodb"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "ab-Snowflake-70b760c0-4daa-464b-8375-2d7512a583fe",
@@ -1497,7 +1283,7 @@
     "sql"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": true
+   "isNew": false
   }
  ]
 }
