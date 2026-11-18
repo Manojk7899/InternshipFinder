@@ -1,60 +1,24 @@
 {
- "updated": "2026-11-17T09:40:21.529588+00:00",
- "count": 70,
+ "updated": "2026-11-18T08:58:49.089356+00:00",
+ "count": 68,
  "jobs": [
   {
-   "id": "gh-okta-8377182",
-   "company": "okta",
-   "title": "Demo Engineering Developer",
-   "location": "Bengaluru, India",
-   "url": "https://www.okta.com/company/careers/opportunity/8377182?gh_jid=8377182",
-   "posted": "2026-11-16",
-   "score": 47,
+   "id": "lv-hevodata-4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+   "company": "hevodata",
+   "title": "Associate SDE",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+   "posted": "2026-11-18",
+   "score": 48,
    "fresher": true,
    "years": 0,
    "bangalore": true,
    "skills": [
-    "react",
-    "node",
-    "aws"
-   ],
-   "firstSeen": "2026-11-17",
-   "isNew": true
-  },
-  {
-   "id": "ab-Snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6",
-   "company": "Snowflake",
-   "title": "Forward Deployed Engineer, Frontier Engineering",
-   "location": "IN-Bangalore-MSO",
-   "url": "https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6",
-   "posted": "2026-11-17",
-   "score": 36,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
     "python",
-    "sql",
-    "llm"
+    "typescript",
+    "rest api"
    ],
-   "firstSeen": "2026-11-17",
-   "isNew": true
-  },
-  {
-   "id": "gh-zscaler-5123489007",
-   "company": "zscaler",
-   "title": "Escalation Engineer - ZIA/ZPA",
-   "location": "Bangalore, IND; Mohali, IND; Pune, IND",
-   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5123489007",
-   "posted": "2026-11-17",
-   "score": 26,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "git"
-   ],
-   "firstSeen": "2026-11-17",
+   "firstSeen": "2026-11-18",
    "isNew": true
   },
   {
@@ -183,26 +147,6 @@
    "isNew": false
   },
   {
-   "id": "lv-cred-9a746e68-0858-4190-9144-54b19a2cbf2c",
-   "company": "cred",
-   "title": "cloud security engineer",
-   "location": "bengaluru",
-   "url": "https://jobs.lever.co/cred/9a746e68-0858-4190-9144-54b19a2cbf2c",
-   "posted": "2026-01-29",
-   "score": 58,
-   "fresher": true,
-   "years": 2,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "llm",
-    "aws",
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": false
-  },
-  {
    "id": "gh-okta-8195169",
    "company": "okta",
    "title": "Workday Extend Developer ",
@@ -302,22 +246,22 @@
    "isNew": false
   },
   {
-   "id": "lv-cred-b3da0ae4-d0a8-45ce-a1e5-73be12b4bfe3",
-   "company": "cred",
-   "title": "threat detection engineer",
-   "location": "bengaluru",
-   "url": "https://jobs.lever.co/cred/b3da0ae4-d0a8-45ce-a1e5-73be12b4bfe3",
-   "posted": "2026-01-29",
-   "score": 51,
+   "id": "gh-okta-8377182",
+   "company": "okta",
+   "title": "Demo Engineering Developer",
+   "location": "Bengaluru, India",
+   "url": "https://www.okta.com/company/careers/opportunity/8377182?gh_jid=8377182",
+   "posted": "2026-11-18",
+   "score": 47,
    "fresher": true,
-   "years": 2,
+   "years": 0,
    "bangalore": true,
    "skills": [
-    "python",
-    "aws",
-    "git"
+    "react",
+    "node",
+    "aws"
    ],
-   "firstSeen": "2026-11-16",
+   "firstSeen": "2026-11-17",
    "isNew": false
   },
   {
@@ -344,7 +288,7 @@
    "title": "Database Migration Engineer",
    "location": "Bengaluru, Karnataka, India",
    "url": "https://job-boards.greenhouse.io/sigmoid/jobs/8829803002",
-   "posted": "2026-09-22",
+   "posted": "2026-11-17",
    "score": 42,
    "fresher": false,
    "years": 0,
@@ -384,7 +328,7 @@
    "title": "Technical Services Engineer",
    "location": "Bengaluru",
    "url": "https://www.mongodb.com/careers/job/?gh_jid=8007613",
-   "posted": "2026-11-16",
+   "posted": "2026-11-17",
    "score": 41,
    "fresher": true,
    "years": 0,
@@ -640,6 +584,25 @@
    "isNew": false
   },
   {
+   "id": "ab-Snowflake-a276eb40-644b-4384-9d9a-bae1c263baa6",
+   "company": "Snowflake",
+   "title": "Forward Deployed Engineer, Frontier Engineering",
+   "location": "IN-Bangalore-MSO",
+   "url": "https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6",
+   "posted": "2026-11-17",
+   "score": 36,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "sql",
+    "llm"
+   ],
+   "firstSeen": "2026-11-17",
+   "isNew": false
+  },
+  {
    "id": "gh-stripe-8324207",
    "company": "stripe",
    "title": "Processing Cost Analyst",
@@ -832,24 +795,6 @@
    "isNew": false
   },
   {
-   "id": "gh-zscaler-5261565007",
-   "company": "zscaler",
-   "title": "Information Security Engineer (Thick Client Testing /  Harness / VAPT)",
-   "location": "Bangalore, IND",
-   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5261565007",
-   "posted": "2026-10-29",
-   "score": 27,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "android",
-    "git"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": false
-  },
-  {
    "id": "gh-stripe-8247127",
    "company": "stripe",
    "title": "AR Analyst",
@@ -871,6 +816,23 @@
    "location": "Bangalore, IND",
    "url": "https://job-boards.greenhouse.io/zscaler/jobs/5263563007",
    "posted": "2026-11-06",
+   "score": 22,
+   "fresher": false,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
+   "firstSeen": "2026-11-16",
+   "isNew": false
+  },
+  {
+   "id": "gh-zscaler-5210010007",
+   "company": "zscaler",
+   "title": "Escalation Engineer - ZIA/ZPA",
+   "location": "Bangalore, IND; Mohali, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5210010007",
+   "posted": "2026-10-29",
    "score": 22,
    "fresher": false,
    "years": 0,
@@ -1201,7 +1163,7 @@
    "title": "Personalized Support Engineer",
    "location": "Remote - India",
    "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
-   "posted": "2026-11-16",
+   "posted": "2026-11-17",
    "score": 20,
    "fresher": false,
    "years": 0,
