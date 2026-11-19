@@ -1,24 +1,131 @@
 {
- "updated": "2026-11-18T08:58:49.089356+00:00",
- "count": 68,
+ "updated": "2026-11-19T09:18:50.479195+00:00",
+ "count": 73,
  "jobs": [
   {
-   "id": "lv-hevodata-4eccaf98-ba19-42ea-b040-e0976d4dadfe",
-   "company": "hevodata",
-   "title": "Associate SDE",
-   "location": "Bangalore, India",
-   "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe",
-   "posted": "2026-11-18",
-   "score": 48,
+   "id": "gh-stripe-8130876",
+   "company": "stripe",
+   "title": "Software Engineer, New Grad",
+   "location": "Bangalore",
+   "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+   "posted": "2026-11-19",
+   "score": 75,
    "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [],
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "gh-sigmoid-7916306002",
+   "company": "sigmoid",
+   "title": "QA Engineer",
+   "location": "Bengaluru",
+   "url": "https://job-boards.greenhouse.io/sigmoid/jobs/7916306002",
+   "posted": "2026-11-18",
+   "score": 53,
+   "fresher": true,
+   "years": 2,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "javascript",
+    "sql"
+   ],
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "gh-gitlab-8730125002",
+   "company": "gitlab",
+   "title": "Release Engineer, Salesforce",
+   "location": "Bangalore, India",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8730125002",
+   "posted": "2026-11-18",
+   "score": 38,
+   "fresher": false,
    "years": 0,
    "bangalore": true,
    "skills": [
     "python",
-    "typescript",
-    "rest api"
+    "git"
    ],
-   "firstSeen": "2026-11-18",
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "gh-zscaler-5085027007",
+   "company": "zscaler",
+   "title": "Escalation Engineer - ZTB",
+   "location": "Bangalore, IND",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5085027007",
+   "posted": "2026-11-18",
+   "score": 27,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "git"
+   ],
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "gh-stripe-7917880",
+   "company": "stripe",
+   "title": "Technical Solutions Engineer",
+   "location": "Remote - US",
+   "url": "https://stripe.com/jobs/search?gh_jid=7917880",
+   "posted": "2026-11-18",
+   "score": 43,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "react",
+    "node",
+    "kotlin",
+    "android",
+    "llm"
+   ],
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "lv-paytm-0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+   "company": "paytm",
+   "title": "Backend - Intern ( SEA & Europe)",
+   "location": "Noida, Uttar Pradesh",
+   "url": "https://jobs.lever.co/paytm/0a6e7022-caaf-4bc3-b6e9-d5dd90c44cf8",
+   "posted": "2026-11-19",
+   "score": 28,
+   "fresher": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "backend"
+   ],
+   "firstSeen": "2026-11-19",
+   "isNew": true
+  },
+  {
+   "id": "ab-Ramp-f90d32c1-7c10-4161-8913-075e1b423697",
+   "company": "Ramp",
+   "title": "Research Engineer, Agentic Systems",
+   "location": "Remote (US)",
+   "url": "https://jobs.ashbyhq.com/ramp/f90d32c1-7c10-4161-8913-075e1b423697",
+   "posted": "2026-11-18",
+   "score": 19,
+   "fresher": false,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "llm"
+   ],
+   "firstSeen": "2026-11-19",
    "isNew": true
   },
   {
@@ -246,6 +353,25 @@
    "isNew": false
   },
   {
+   "id": "lv-hevodata-4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+   "company": "hevodata",
+   "title": "Associate SDE",
+   "location": "Bangalore, India",
+   "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+   "posted": "2026-11-18",
+   "score": 48,
+   "fresher": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python",
+    "typescript",
+    "rest api"
+   ],
+   "firstSeen": "2026-11-18",
+   "isNew": false
+  },
+  {
    "id": "gh-okta-8377182",
    "company": "okta",
    "title": "Demo Engineering Developer",
@@ -458,25 +584,6 @@
    "skills": [
     "javascript",
     "frontend"
-   ],
-   "firstSeen": "2026-11-16",
-   "isNew": false
-  },
-  {
-   "id": "gh-gitlab-8867756002",
-   "company": "gitlab",
-   "title": "Site Reliability Engineer, Cells Infrastructure",
-   "location": "Bangalore, India",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8867756002",
-   "posted": "2026-11-09",
-   "score": 38,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "sql",
-    "aws",
-    "git"
    ],
    "firstSeen": "2026-11-16",
    "isNew": false
@@ -827,12 +934,12 @@
    "isNew": false
   },
   {
-   "id": "gh-zscaler-5210010007",
+   "id": "gh-zscaler-5123489007",
    "company": "zscaler",
    "title": "Escalation Engineer - ZIA/ZPA",
    "location": "Bangalore, IND; Mohali, IND",
-   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5210010007",
-   "posted": "2026-10-29",
+   "url": "https://job-boards.greenhouse.io/zscaler/jobs/5123489007",
+   "posted": "2026-11-18",
    "score": 22,
    "fresher": false,
    "years": 0,
@@ -840,22 +947,7 @@
    "skills": [
     "git"
    ],
-   "firstSeen": "2026-11-16",
-   "isNew": false
-  },
-  {
-   "id": "ab-Sarvam-36f89b00-2010-4d23-aae3-17a2f53d9eaa",
-   "company": "Sarvam",
-   "title": "Agent Engineer",
-   "location": "Bengaluru",
-   "url": "https://jobs.ashbyhq.com/sarvam/36f89b00-2010-4d23-aae3-17a2f53d9eaa",
-   "posted": "2026-08-20",
-   "score": 20,
-   "fresher": false,
-   "years": 0,
-   "bangalore": true,
-   "skills": [],
-   "firstSeen": "2026-11-16",
+   "firstSeen": "2026-11-17",
    "isNew": false
   },
   {
@@ -923,7 +1015,7 @@
    "title": "Machine Learning Engineer",
    "location": "Remote - India",
    "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187",
-   "posted": "2026-10-30",
+   "posted": "2026-11-18",
    "score": 40,
    "fresher": true,
    "years": 0,
@@ -1163,7 +1255,7 @@
    "title": "Personalized Support Engineer",
    "location": "Remote - India",
    "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
-   "posted": "2026-11-17",
+   "posted": "2026-11-18",
    "score": 20,
    "fresher": false,
    "years": 0,
