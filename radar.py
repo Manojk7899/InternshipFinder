@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 """
-Job radar: pulls fresher-friendly dev/AI roles from public company job boards,
-scores them against a fresher AI/full-stack profile, and writes docs/jobs.json.
-
-No API keys, no login, no personal data.
-Run directly (python radar.py) or import scan() from the Streamlit app.
+Internship Radar: finds fresher-friendly internships from public company job boards,
+scores them for Rust, HTML, CSS, and JavaScript skills, and writes docs/jobs.json.
 """
 
 from __future__ import annotations
@@ -18,65 +15,52 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-UA = {"User-Agent": "Mozilla/5.0 (compatible; job-radar/1.0)"}
+UA = {"User-Agent": "Mozilla/5.0 (compatible; internship-radar/1.0)"}
 TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 TAG_RE = re.compile(r"<[^>]*>")
 ENT_RE = re.compile(r"&[a-z]+;", re.I)
 WS_RE = re.compile(r"\s+")
 
-# --- hard filters -----------------------------------------------------------
 SENIOR_RE = re.compile(
     r"\b(senior|sr|staff|principal|lead|leader|director|head|vp|chief|architect|"
-    r"manager|mgr|iii|iv|ii|3|4|5)\b",
-    re.I,
+    r"manager|mgr|iii|iv|ii|3|4|5)\b", re.I,
 )
 LEVEL_RE = re.compile(
     r"(?:sde|sse|swe|lvl|level|grade|band)[ _-]*[2-9]"
     r"|\bl[ _-]?[2-9]\b"
-    # "Security Engineer 2", "Data Scientist - 3", "Developer II" etc.
-    r"|\b(?:engineer|developer|analyst|scientist|programmer|architect)\s*[-_]?\s*[2-9]\b",
+    r"|\b(?:engineer|developer|analyst|scientist|programmer|architect)\s*[-_]?[2-9]\b",
     re.I,
 )
-
-INDIA_RE = re.compile(
-    r"\b(india|bangalore|bengaluru|hyderabad|pune|chennai|mumbai|delhi|gurgaon|"
-    r"gurugram|noida|kolkata|ahmedabad|jaipur|kochi|coimbatore|indore|"
-    r"thiruvananthapuram|trivandrum|bhubaneswar|chandigarh|nagpur|mysore|mysuru)\b",
+INTERNSHIP_RE = re.compile(
+    r"\b(internship|intern|apprentice|trainee|graduate trainee|co-op|coop|working student)\b",
     re.I,
-)
-
-# Roles tied to a country other than India are no use from Bangalore. A posting that
-# says "Remote" with no country attached is still worth surfacing.
-NON_INDIA_RE = re.compile(
-    r"\b(usa|u\.s\.|united states|america|canada|toronto|vancouver|mexico|brazil|"
-    r"argentina|colombia|latam|poland|warsaw|germany|berlin|munich|france|paris|"
-    r"spain|madrid|portugal|lisbon|netherlands|amsterdam|ireland|dublin|uk|"
-    r"united kingdom|london|sweden|norway|denmark|switzerland|zurich|israel|"
-    r"tel aviv|australia|sydney|melbourne|new zealand|singapore|japan|tokyo|korea|"
-    r"china|shanghai|beijing|hong kong|taiwan|vietnam|thailand|philippines|manila|"
-    r"indonesia|jakarta|malaysia|dubai|uae|emea|nyc|new york|san francisco|seattle|"
-    r"austin|boston|chicago|denver|atlanta|los angeles|portland|dallas|miami|"
-    r"washington|california|texas|florida|ontario|quebec)\b",
-    re.I,
-)
-JUNIOR_OK_RE = re.compile(
-    r"\b(sde\s*-?\s*(1|i)|software engineer\s*-?\s*(1|i)|engineer\s*-?\s*(1|i))\b", re.I
 )
 TECH_ROLE_RE = re.compile(
-    r"\b(engineer|developer|sde|programmer|software|data scien|machine learning|ml|ai|"
-    r"full.?stack|backend|back.?end|frontend|front.?end|android|mobile|qa|sdet|test|"
-    r"devops|analyst|research)\b",
+    r"\b(engineer|developer|sde|programmer|software|web|frontend|front.?end|"
+    r"full.?stack|backend|back.?end|rust|javascript|html|css|ui|ux|mobile|data|qa|test|research)\b",
     re.I,
 )
 NON_TECH_RE = re.compile(
-    r"\b(sales|marketing|recruit|talent|hr|people|finance|account|legal|writer|content|"
-    r"design|ux|ui designer|product manage|program manage|project manage|customer success|"
-    r"business development|operations|supply|logistics|partner|enablement|product research|"
-    r"specialist)\b",
+    r"\b(sales|marketing|recruit|talent|hr|people|finance|account|legal|writer|"
+    r"product manage|program manage|project manage|customer success|operations|logistics|"
+    r"business development|specialist)\b", re.I,
+)
+INDIA_RE = re.compile(
+    r"\b(india|bangalore|bengaluru|hyderabad|pune|chennai|mumbai|delhi|gurgaon|"
+    r"gurugram|noida|kolkata|ahmedabad|jaipur|kochi|coimbatore|indore|"
+    r"bhubaneswar|chandigarh|nagpur|mysore|mysuru)\b", re.I,
+)
+NON_INDIA_RE = re.compile(
+    r"\b(usa|u\.s\.|united states|america|canada|toronto|vancouver|mexico|brazil|"
+    r"poland|warsaw|germany|berlin|munich|france|paris|spain|madrid|portugal|lisbon|"
+    r"netherlands|amsterdam|ireland|dublin|uk|united kingdom|london|sweden|norway|"
+    r"denmark|switzerland|israel|tel aviv|australia|sydney|melbourne|new zealand|"
+    r"singapore|japan|tokyo|korea|china|hong kong|taiwan|dubai|uae|nyc|new york|"
+    r"san francisco|seattle|austin|boston|chicago|denver|los angeles|california|texas)\b",
     re.I,
 )
-YEARS_RE = re.compile(r"(\d{1,2})\s*(?:\+|-|–|to)?\s*(\d{1,2})?\s*(?:\+)?\s*year", re.I)
+YEARS_RE = re.compile(r"(\d{1,2})\s*(?:\+|-|–|to)?\s*(\d{1,2})?\s*(?:\+)?\s*years?", re.I)
 
 
 def strip_html(h):
@@ -97,24 +81,16 @@ def get_json(url, retries=3):
     return None
 
 
-# --- sources ----------------------------------------------------------------
-
 def greenhouse(token):
     j = get_json("https://boards-api.greenhouse.io/v1/boards/%s/jobs?content=true" % token)
     if not j or "jobs" not in j:
         return []
-    out = []
-    for x in j["jobs"]:
-        out.append({
-            "id": "gh-%s-%s" % (token, x.get("id")),
-            "company": token,
-            "title": x.get("title") or "",
-            "location": (x.get("location") or {}).get("name") or "",
-            "url": x.get("absolute_url") or "",
-            "posted": (x.get("updated_at") or "")[:10],
-            "text": strip_html(x.get("content") or "")[:4000],
-        })
-    return out
+    return [{
+        "id": "gh-%s-%s" % (token, x.get("id")), "company": token,
+        "title": x.get("title") or "", "location": (x.get("location") or {}).get("name") or "",
+        "url": x.get("absolute_url") or "", "posted": (x.get("updated_at") or "")[:10],
+        "text": strip_html(x.get("content") or "")[:4000],
+    } for x in j["jobs"]]
 
 
 def lever(token):
@@ -124,17 +100,12 @@ def lever(token):
     out = []
     for x in j:
         created = x.get("createdAt")
-        posted = ""
-        if created:
-            posted = datetime.fromtimestamp(created / 1000, timezone.utc).strftime("%Y-%m-%d")
+        posted = datetime.fromtimestamp(created / 1000, timezone.utc).strftime("%Y-%m-%d") if created else ""
         lists = " ".join(l.get("content", "") for l in (x.get("lists") or []))
         out.append({
-            "id": "lv-%s-%s" % (token, x.get("id")),
-            "company": token,
-            "title": x.get("text") or "",
-            "location": (x.get("categories") or {}).get("location") or "",
-            "url": x.get("hostedUrl") or "",
-            "posted": posted,
+            "id": "lv-%s-%s" % (token, x.get("id")), "company": token,
+            "title": x.get("text") or "", "location": (x.get("categories") or {}).get("location") or "",
+            "url": x.get("hostedUrl") or "", "posted": posted,
             "text": strip_html((x.get("descriptionPlain") or "") + " " + lists)[:4000],
         })
     return out
@@ -144,21 +115,13 @@ def ashby(token):
     j = get_json("https://api.ashbyhq.com/posting-api/job-board/%s" % token)
     if not j or "jobs" not in j:
         return []
-    out = []
-    for x in j["jobs"]:
-        out.append({
-            "id": "ab-%s-%s" % (token, x.get("id")),
-            "company": token,
-            "title": x.get("title") or "",
-            "location": x.get("location") or "",
-            "url": x.get("jobUrl") or x.get("applyUrl") or "",
-            "posted": (x.get("publishedAt") or "")[:10],
-            "text": strip_html(x.get("descriptionHtml") or "")[:4000],
-        })
-    return out
+    return [{
+        "id": "ab-%s-%s" % (token, x.get("id")), "company": token,
+        "title": x.get("title") or "", "location": x.get("location") or "",
+        "url": x.get("jobUrl") or x.get("applyUrl") or "", "posted": (x.get("publishedAt") or "")[:10],
+        "text": strip_html(x.get("descriptionHtml") or "")[:4000],
+    } for x in j["jobs"]]
 
-
-# --- scoring ----------------------------------------------------------------
 
 def min_years(text):
     best = 0
@@ -175,11 +138,14 @@ def score(job, cfg):
     loc_raw = job.get("location") or ""
     hay = title + " " + loc_raw.lower() + " " + body
 
+    # Internship listings must still look like technical openings.
+    if not INTERNSHIP_RE.search(title + " " + body[:1800]):
+        return None
     if NON_TECH_RE.search(title):
         return None
     if not TECH_ROLE_RE.search(title):
         return None
-    if SENIOR_RE.search(title) and not JUNIOR_OK_RE.search(title):
+    if SENIOR_RE.search(title):
         return None
     if LEVEL_RE.search(title):
         return None
@@ -206,48 +172,41 @@ def score(job, cfg):
         elif k in body[:1800]:
             s += round(v / 2)
             fresher = True
+
     if 0 < years <= 2:
-        s += 15
+        s += 10
         fresher = True
 
-    loc = ((job.get("title") or "") + " " + loc_raw).lower()
+    loc = (title + " " + loc_raw).lower()
     for k, v in cfg["locationBoost"].items():
         if k in loc:
             s += v
 
-    # Word-boundary match, so "Indiana" is not mistaken for India.
     in_india = bool(INDIA_RE.search(loc))
     if not in_india:
-        # Keep only a bare "Remote" with no other country attached.
         if "remote" not in loc or NON_INDIA_RE.search(loc):
             return None
 
-    out = dict((k, v) for k, v in job.items() if k != "text")
+    out = {k: v for k, v in job.items() if k != "text"}
     out.update({
         "score": s,
         "fresher": fresher,
+        "internship": True,
         "years": years,
         "bangalore": ("bangalore" in loc or "bengaluru" in loc),
-        "skills": matched[:8],
+        "skills": matched[:10],
     })
     return out
 
 
-# --- main -------------------------------------------------------------------
-
 def scan(seen=None):
-    """Fetch, filter and score every configured board. Returns (jobs, seen)."""
     cfg = json.loads((ROOT / "scoring.json").read_text(encoding="utf-8"))
     companies = json.loads((ROOT / "companies.json").read_text(encoding="utf-8"))
     seen = dict(seen or {})
 
-    tasks = []
-    for c in companies.get("greenhouse", []):
-        tasks.append((greenhouse, c))
-    for c in companies.get("lever", []):
-        tasks.append((lever, c))
-    for c in companies.get("ashby", []):
-        tasks.append((ashby, c))
+    tasks = [(greenhouse, c) for c in companies.get("greenhouse", [])]
+    tasks += [(lever, c) for c in companies.get("lever", [])]
+    tasks += [(ashby, c) for c in companies.get("ashby", [])]
 
     with ThreadPoolExecutor(max_workers=12) as pool:
         results = list(pool.map(lambda t: t[0](t[1]), tasks))
@@ -283,10 +242,7 @@ def main():
     docs = ROOT / "docs"
     docs.mkdir(exist_ok=True)
     seen_path = docs / "seen.json"
-    seen = {}
-    if seen_path.exists():
-        seen = json.loads(seen_path.read_text(encoding="utf-8"))
-
+    seen = json.loads(seen_path.read_text(encoding="utf-8")) if seen_path.exists() else {}
     jobs, seen = scan(seen)
 
     payload = {
@@ -299,7 +255,7 @@ def main():
 
     fresh = sum(1 for j in jobs if j["isNew"])
     blr = sum(1 for j in jobs if j["bangalore"])
-    print("kept %d matches (%d new today, %d in Bangalore)" % (len(jobs), fresh, blr))
+    print("kept %d internship matches (%d new today, %d in Bangalore)" % (len(jobs), fresh, blr))
 
 
 if __name__ == "__main__":
