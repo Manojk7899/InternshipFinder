@@ -1,11 +1,8 @@
 """
-Job Radar - Streamlit dashboard.
+Internship Radar - Streamlit dashboard.
 
-Reads the daily scan committed by GitHub Actions (docs/jobs.json), and can also
-rescan live on demand. Includes a lightweight application tracker so you can mark
-what you've applied to and when to follow up.
-
-Run locally:  streamlit run streamlit_app.py
+Finds fresher-friendly internships and ranks them against Rust, HTML, CSS,
+and JavaScript skills.
 """
 
 import json
@@ -22,23 +19,18 @@ JOBS_FILE = ROOT / "docs" / "jobs.json"
 TRACKER_FILE = ROOT / "tracker.csv"
 
 STATUSES = ["Not applied", "Applied", "Referral asked", "OA / test", "Interview", "Offer", "Rejected"]
-
-# Label -> maximum age in days, inclusive. None means no limit.
 WINDOWS = {
     "Today only": 0,
     "Last 3 days": 2,
     "Last week": 6,
-    "All open roles": None,
+    "All open internships": None,
 }
 
-st.set_page_config(page_title="Job Radar", page_icon="\U0001F4E1", layout="wide")
+st.set_page_config(page_title="Internship Radar", page_icon="🎓", layout="wide")
 
-
-# --- data -------------------------------------------------------------------
 
 @st.cache_data(ttl=1800)
 def load_jobs():
-    """Load the last committed scan."""
     if not JOBS_FILE.exists():
         return [], None
     data = json.loads(JOBS_FILE.read_text(encoding="utf-8"))
@@ -46,7 +38,6 @@ def load_jobs():
 
 
 def live_scan():
-    """Rescan every board right now."""
     seen = {}
     seen_path = ROOT / "docs" / "seen.json"
     if seen_path.exists():
@@ -56,8 +47,6 @@ def live_scan():
 
 
 def age_days(first_seen):
-    """Days since the radar first saw this posting. Computed here rather than during the
-    scan, so the figure stays correct even if the daily job misses a run."""
     try:
         seen = datetime.strptime(first_seen, "%Y-%m-%d").date()
     except (ValueError, TypeError):
@@ -66,8 +55,6 @@ def age_days(first_seen):
 
 
 def load_tracker():
-    """Read saved statuses. Note this file does not survive a Streamlit Cloud
-    redeploy - use the CSV download/restore in the My applications tab."""
     if not TRACKER_FILE.exists():
         return {}
     df = pd.read_csv(TRACKER_FILE).dropna(subset=["id"])
@@ -78,13 +65,11 @@ def load_tracker():
 
 def save_tracker(d):
     rows = [{"id": k, "status": v} for k, v in d.items() if v and v != "Not applied"]
-    df = pd.DataFrame(rows, columns=["id", "status"])
-    df.to_csv(TRACKER_FILE, index=False)
+    pd.DataFrame(rows, columns=["id", "status"]).to_csv(TRACKER_FILE, index=False)
 
 
-# --- header -----------------------------------------------------------------
-
-st.title("\U0001F4E1 Job Radar")
+st.title("🎓 Internship Radar")
+st.caption("Fresher internships matching Rust, HTML, CSS, JavaScript and frontend skills")
 
 if "jobs" not in st.session_state:
     jobs, updated = load_jobs()
@@ -93,8 +78,8 @@ if "jobs" not in st.session_state:
 
 top = st.columns([3, 1])
 with top[1]:
-    if st.button("Rescan now", use_container_width=True):
-        with st.spinner("Scanning job boards..."):
+    if st.button("Rescan internships", use_container_width=True):
+        with st.spinner("Scanning internship boards..."):
             st.session_state.jobs = live_scan()
             st.session_state.updated = datetime.now(timezone.utc).isoformat()
         st.rerun()
@@ -103,10 +88,7 @@ jobs = st.session_state.jobs
 updated = st.session_state.updated
 
 if not jobs:
-    st.warning(
-        "No scan data yet. Click **Rescan now**, or run the GitHub Action once "
-        "so it commits `docs/jobs.json`."
-    )
+    st.warning("No internship scan data yet. Click **Rescan internships**, or run the GitHub Action once.")
     st.stop()
 
 with top[0]:
@@ -119,34 +101,21 @@ with top[0]:
             when = updated
     n_new = sum(1 for j in jobs if age_days(j.get("firstSeen")) == 0)
     n_week = sum(1 for j in jobs if age_days(j.get("firstSeen")) <= 6)
-    st.caption(
-        "%d open roles  ·  %d new today  ·  %d this week  ·  last scan %s"
-        % (len(jobs), n_new, n_week, when)
-    )
-
-
-# --- filters ----------------------------------------------------------------
+    st.caption("%d open internships · %d new today · %d this week · last scan %s" %
+               (len(jobs), n_new, n_week, when))
 
 with st.sidebar:
     st.header("Filters")
-    window = st.radio(
-        "First seen",
-        list(WINDOWS),
-        index=1,
-        help="Catches up on anything found while you were away, so missing a day costs nothing.",
-    )
+    window = st.radio("First seen", list(WINDOWS), index=1)
     only_blr = st.checkbox("Bangalore only", value=True)
-    only_fresher = st.checkbox("Fresher-friendly only", value=False)
-    min_score = st.slider("Minimum match score", 0, 120, 15, step=5)
+    only_fresher = st.checkbox("Fresher-friendly only", value=True)
+    min_score = st.slider("Minimum match score", 0, 160, 12, step=5)
     companies = sorted({j["company"] for j in jobs})
-    picked = st.multiselect("Companies", companies, default=[])
-    search = st.text_input("Search title or skill", "")
+    picked = st.multiselect("Companies", companies)
+    search = st.text_input("Search internship or skill", "")
 
     st.divider()
-    st.caption(
-        "Scores rank roles by skill overlap, fresher signals and location. "
-        "A 30 you're excited about beats a 70 you aren't."
-    )
+    st.caption("Primary profile: Rust · HTML · CSS · JavaScript")
 
 cutoff = WINDOWS[window]
 rows = []
@@ -167,26 +136,18 @@ for j in jobs:
             continue
     rows.append(j)
 
-
-# --- tracker state ----------------------------------------------------------
-
 if "tracker" not in st.session_state:
     st.session_state.tracker = load_tracker()
 tracker = st.session_state.tracker
 
-tabs = st.tabs(["Open roles (%d)" % len(rows), "My applications"])
+tabs = st.tabs(["Open internships (%d)" % len(rows), "My applications"])
 
 with tabs[0]:
     if not rows:
         st.info("Nothing matches these filters. Loosen them in the sidebar.")
     for j in rows:
         age = age_days(j.get("firstSeen"))
-        if age == 0:
-            badge = " :green-badge[NEW]"
-        elif age <= 6:
-            badge = " :gray-badge[%dd ago]" % age
-        else:
-            badge = ""
+        badge = " :green-badge[NEW]" if age == 0 else (" :gray-badge[%dd ago]" % age if age <= 6 else "")
         blr = " :blue-badge[Bangalore]" if j.get("bangalore") else ""
         fresh = " :orange-badge[fresher]" if j.get("fresher") else ""
         yrs = " :gray-badge[%dy exp]" % j["years"] if j.get("years") else ""
@@ -195,7 +156,7 @@ with tabs[0]:
             c = st.columns([6, 2, 2])
             with c[0]:
                 st.markdown("**[%s](%s)**%s%s%s%s" % (j["title"], j["url"], badge, blr, fresh, yrs))
-                st.caption("%s  ·  %s" % (j["company"], j.get("location") or "India"))
+                st.caption("%s · %s" % (j["company"], j.get("location") or "India"))
                 if j.get("skills"):
                     st.caption("Matched: " + ", ".join(j["skills"]))
             with c[1]:
@@ -211,20 +172,15 @@ with tabs[0]:
                     save_tracker(tracker)
 
 with tabs[1]:
-    st.caption(
-        ":warning: Statuses are stored on the server's temporary disk, which is wiped "
-        "whenever the app redeploys (roughly daily, after each scan). **Download the CSV "
-        "below to keep your history**, and restore it here afterwards."
-    )
-
-    restore = st.file_uploader("Restore a saved tracker CSV", type="csv")
+    st.caption("Statuses are temporary on Streamlit Cloud. Download the CSV to keep a copy.")
+    restore = st.file_uploader("Restore saved tracker CSV", type="csv")
     if restore is not None:
         try:
             df_in = pd.read_csv(restore).dropna(subset=["id"])
             restored = df_in.set_index("id")["status"].to_dict()
             st.session_state.tracker.update(restored)
             save_tracker(st.session_state.tracker)
-            st.success("Restored %d tracked roles." % len(restored))
+            st.success("Restored %d tracked internships." % len(restored))
         except Exception as exc:
             st.error("Could not read that file: %s" % exc)
 
@@ -232,31 +188,14 @@ with tabs[1]:
     applied_ids = {k for k, v in tracker.items() if v and v != "Not applied"}
     mine = [j for j in jobs if j["id"] in applied_ids]
     if not mine:
-        st.info(
-            "Nothing tracked yet. Set a status on any role in the **Open roles** tab "
-            "and it will appear here."
-        )
+        st.info("Nothing tracked yet. Set a status in **Open internships**.")
     else:
         df = pd.DataFrame([{
-            "Status": tracker.get(j["id"], ""),
-            "Role": j["title"],
-            "Company": j["company"],
-            "Location": j.get("location", ""),
-            "Score": j.get("score", 0),
-            "Link": j["url"],
+            "Status": tracker.get(j["id"], ""), "Internship": j["title"],
+            "Company": j["company"], "Location": j.get("location", ""),
+            "Score": j.get("score", 0), "Link": j["url"],
         } for j in mine]).sort_values("Status")
-        st.dataframe(
-            df, use_container_width=True, hide_index=True,
-            column_config={"Link": st.column_config.LinkColumn("Link", display_text="Open")},
-        )
-        st.caption(
-            "Follow up on anything sitting at **Applied** for more than 5 days - "
-            "a short note to a recruiter or engineer at the company is where most "
-            "extra interviews come from."
-        )
-        st.download_button(
-            "Download tracker as CSV",
-            df.to_csv(index=False),
-            "job-tracker.csv",
-            "text/csv",
-        )
+        st.dataframe(df, use_container_width=True, hide_index=True,
+                     column_config={"Link": st.column_config.LinkColumn("Link", display_text="Open")})
+        st.download_button("Download internship tracker as CSV", df.to_csv(index=False),
+                           "internship-tracker.csv", "text/csv")
