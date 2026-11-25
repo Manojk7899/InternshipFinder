@@ -1,29 +1,10 @@
 {
-  "_comment": "Fresher internship scoring profile. Rust, HTML, CSS, JavaScript are the primary skills.",
+  "_comment": "Fresher internship scoring profile tailored to the technologies evidenced by Manoj K's linked project: Rust, TypeScript, CSS, and JavaScript.",
   "skills": {
     "rust": 10,
-    "html": 8,
+    "typescript": 10,
     "css": 8,
-    "javascript": 9,
-    "typescript": 6,
-    "react": 7,
-    "frontend": 7,
-    "front-end": 7,
-    "full stack": 6,
-    "fullstack": 6,
-    "web development": 7,
-    "web developer": 7,
-    "node": 5,
-    "node.js": 5,
-    "git": 3,
-    "github": 3,
-    "sql": 3,
-    "rest api": 4,
-    "python": 3,
-    "wasm": 7,
-    "webassembly": 7,
-    "tailwind": 5,
-    "bootstrap": 4
+    "javascript": 9
   },
   "fresherSignals": {
     "internship": 35,
