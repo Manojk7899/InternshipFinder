@@ -1,10 +1,21 @@
 {
-  "_comment": "Fresher internship scoring profile tailored to the technologies evidenced by Manoj K's linked project: Rust, TypeScript, CSS, and JavaScript.",
+  "_comment": "Fresher internship scoring profile based strictly on Manoj K's resume technical skills.",
   "skills": {
-    "rust": 10,
-    "typescript": 10,
+    "rust": 12,
+    "html": 8,
     "css": 8,
-    "javascript": 9
+    "javascript": 10,
+    "axum": 8,
+    "tokio": 8,
+    "tcp": 3,
+    "rest api": 5,
+    "postgresql": 4,
+    "sqlite": 4,
+    "sqlx": 4,
+    "git": 5,
+    "github": 5,
+    "docker": 4,
+    "c": 2
   },
   "fresherSignals": {
     "internship": 35,
