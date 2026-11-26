@@ -2,6 +2,7 @@
   "_comment": "Fresher internship scoring profile based strictly on Manoj K's resume technical skills.",
   "skills": {
     "rust": 12,
+    "c": 2,
     "html": 8,
     "css": 8,
     "javascript": 10,
@@ -14,8 +15,7 @@
     "sqlx": 4,
     "git": 5,
     "github": 5,
-    "docker": 4,
-    "c": 2
+    "docker": 4
   },
   "fresherSignals": {
     "internship": 35,
