@@ -1,8 +1,8 @@
 """
 Internship Radar - Streamlit dashboard.
 
-Finds fresher-friendly internships and ranks them against Rust, HTML, CSS,
-and JavaScript skills.
+Finds fresher-friendly internships and ranks them against Rust, TypeScript,
+CSS, and JavaScript skills.
 """
 
 import json
@@ -69,7 +69,7 @@ def save_tracker(d):
 
 
 st.title("🎓 Internship Radar")
-st.caption("Fresher internships matching Rust, HTML, CSS, JavaScript and frontend skills")
+st.caption("Fresher internships matching Rust, TypeScript, CSS, and JavaScript")
 
 if "jobs" not in st.session_state:
     jobs, updated = load_jobs()
@@ -115,7 +115,7 @@ with st.sidebar:
     search = st.text_input("Search internship or skill", "")
 
     st.divider()
-    st.caption("Primary profile: Rust · HTML · CSS · JavaScript")
+    st.caption("Resume skills: Rust · TypeScript · CSS · JavaScript")
 
 cutoff = WINDOWS[window]
 rows = []
