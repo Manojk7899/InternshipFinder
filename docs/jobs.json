@@ -1,25 +1,7 @@
 {
- "updated": "2026-11-26T09:50:09.205793+00:00",
+ "updated": "2026-11-27T09:55:09.701225+00:00",
  "count": 7,
  "jobs": [
-  {
-   "id": "lv-fampay-cf014ef0-218a-4041-a238-ff91c7b9a5bc",
-   "company": "fampay",
-   "title": "Backend Engineering Intern",
-   "location": "Bengaluru",
-   "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc",
-   "posted": "2026-11-26",
-   "score": 114,
-   "fresher": true,
-   "internship": true,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python"
-   ],
-   "firstSeen": "2026-11-26",
-   "isNew": true
-  },
   {
    "id": "lv-hevodata-993a3ed3-3014-432f-b0f4-28d300d58d9a",
    "company": "hevodata",
@@ -33,6 +15,7 @@
    "years": 0,
    "bangalore": true,
    "skills": [
+    "python",
     "typescript",
     "rest api",
     "api"
@@ -59,6 +42,24 @@
     "api"
    ],
    "firstSeen": "2026-11-16",
+   "isNew": false
+  },
+  {
+   "id": "lv-fampay-cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+   "company": "fampay",
+   "title": "Backend Engineering Intern",
+   "location": "Bengaluru",
+   "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+   "posted": "2026-11-26",
+   "score": 114,
+   "fresher": true,
+   "internship": true,
+   "years": 0,
+   "bangalore": true,
+   "skills": [
+    "python"
+   ],
+   "firstSeen": "2026-11-26",
    "isNew": false
   },
   {
