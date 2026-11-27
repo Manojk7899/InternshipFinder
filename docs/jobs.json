@@ -1,24 +1,23 @@
 {
- "updated": "2026-11-21T17:20:44.398786+00:00",
+ "updated": "2026-11-26T09:50:09.205793+00:00",
  "count": 7,
  "jobs": [
   {
-   "id": "gh-affirm-8201469003",
-   "company": "affirm",
-   "title": "Software Engineer I, Backend (Streaming Infra)",
-   "location": "Remote US",
-   "url": "https://job-boards.greenhouse.io/affirm/jobs/8201469003",
-   "posted": "2026-11-20",
-   "score": 48,
+   "id": "lv-fampay-cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+   "company": "fampay",
+   "title": "Backend Engineering Intern",
+   "location": "Bengaluru",
+   "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc",
+   "posted": "2026-11-26",
+   "score": 114,
    "fresher": true,
    "internship": true,
    "years": 0,
-   "bangalore": false,
+   "bangalore": true,
    "skills": [
-    "sql",
     "python"
    ],
-   "firstSeen": "2026-11-21",
+   "firstSeen": "2026-11-26",
    "isNew": true
   },
   {
@@ -28,7 +27,7 @@
    "location": "Bangalore, India",
    "url": "https://jobs.lever.co/hevodata/993a3ed3-3014-432f-b0f4-28d300d58d9a",
    "posted": "2026-09-21",
-   "score": 137,
+   "score": 154,
    "fresher": true,
    "internship": true,
    "years": 0,
@@ -36,7 +35,7 @@
    "skills": [
     "typescript",
     "rest api",
-    "python"
+    "api"
    ],
    "firstSeen": "2026-11-16",
    "isNew": false
@@ -48,15 +47,16 @@
    "location": "Bengaluru",
    "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24",
    "posted": "2026-09-23",
-   "score": 117,
+   "score": 134,
    "fresher": true,
    "internship": true,
    "years": 0,
    "bangalore": true,
    "skills": [
+    "python",
     "javascript",
     "sql",
-    "python"
+    "api"
    ],
    "firstSeen": "2026-11-16",
    "isNew": false
@@ -68,7 +68,7 @@
    "location": "Onsite in Bangalore",
    "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735",
    "posted": "2026-10-15",
-   "score": 112,
+   "score": 106,
    "fresher": true,
    "internship": true,
    "years": 0,
@@ -86,32 +86,17 @@
    "location": "Bengaluru",
    "url": "https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72",
    "posted": "2026-11-20",
-   "score": 90,
+   "score": 106,
    "fresher": true,
    "internship": true,
    "years": 0,
    "bangalore": true,
    "skills": [
+    "python",
     "sql",
-    "python"
+    "api"
    ],
    "firstSeen": "2026-11-20",
-   "isNew": false
-  },
-  {
-   "id": "gh-stripe-8031833",
-   "company": "stripe",
-   "title": "Software Engineer, Intern",
-   "location": "Bengaluru",
-   "url": "https://stripe.com/jobs/search?gh_jid=8031833",
-   "posted": "2026-11-19",
-   "score": 84,
-   "fresher": true,
-   "internship": true,
-   "years": 0,
-   "bangalore": true,
-   "skills": [],
-   "firstSeen": "2026-11-16",
    "isNew": false
   },
   {
@@ -121,18 +106,37 @@
    "location": "Remote US",
    "url": "https://job-boards.greenhouse.io/affirm/jobs/8017340003",
    "posted": "2026-10-30",
-   "score": 66,
+   "score": 79,
    "fresher": true,
    "internship": true,
    "years": 0,
    "bangalore": false,
    "skills": [
+    "python",
     "javascript",
     "typescript",
-    "fullstack",
-    "python"
+    "fullstack"
    ],
    "firstSeen": "2026-11-16",
+   "isNew": false
+  },
+  {
+   "id": "gh-affirm-8201469003",
+   "company": "affirm",
+   "title": "Software Engineer I, Backend (Streaming Infra)",
+   "location": "Remote US",
+   "url": "https://job-boards.greenhouse.io/affirm/jobs/8201469003",
+   "posted": "2026-11-20",
+   "score": 60,
+   "fresher": true,
+   "internship": true,
+   "years": 0,
+   "bangalore": false,
+   "skills": [
+    "python",
+    "sql"
+   ],
+   "firstSeen": "2026-11-21",
    "isNew": false
   }
  ]
