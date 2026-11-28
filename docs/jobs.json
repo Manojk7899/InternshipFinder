@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-27T09:55:09.701225+00:00",
- "count": 7,
+ "updated": "2026-11-28T09:09:14.043003+00:00",
+ "count": 6,
  "jobs": [
   {
    "id": "lv-hevodata-993a3ed3-3014-432f-b0f4-28d300d58d9a",
@@ -78,26 +78,6 @@
     "rust"
    ],
    "firstSeen": "2026-11-16",
-   "isNew": false
-  },
-  {
-   "id": "ab-Sarvam-0a5bf81d-3370-47e6-88f4-14aa5102ba72",
-   "company": "Sarvam",
-   "title": "Product User Research, Intern",
-   "location": "Bengaluru",
-   "url": "https://jobs.ashbyhq.com/sarvam/0a5bf81d-3370-47e6-88f4-14aa5102ba72",
-   "posted": "2026-11-20",
-   "score": 106,
-   "fresher": true,
-   "internship": true,
-   "years": 0,
-   "bangalore": true,
-   "skills": [
-    "python",
-    "sql",
-    "api"
-   ],
-   "firstSeen": "2026-11-20",
    "isNew": false
   },
   {
